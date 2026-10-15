@@ -1,0 +1,6 @@
+.venv
+.mypy_cache
+.env
+
+*.jsonl
+*.pyc
