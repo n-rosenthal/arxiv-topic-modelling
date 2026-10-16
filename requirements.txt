@@ -4,3 +4,19 @@ huggingface_hub>=0.26.0
 
 # Download progress indicators
 tqdm>=4.66.0
+
+# PDF to plain text transformation
+pymupdf>=1.24.0
+
+# HTTP requests
+requests>=2.31.0,<3.0.0
+
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+seaborn>=0.12.2
+
+
+# NLP
+spacy>=3.8.16
+nltk>=3.8.0

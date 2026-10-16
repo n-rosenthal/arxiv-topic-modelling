@@ -60,33 +60,46 @@ class ArxivDownloader:
         )
 
     def load(self) -> IterableDataset:
-        """
-        Load the requested dataset split in streaming mode.
+        """Load metadata from the configured Hugging Face dataset."""
+        from datasets import load_dataset
 
-        Returns
-        -------
-        IterableDataset
-            An iterable dataset whose records are retrieved
-            incrementally.
-        """
         logger.info(
-            "Loading dataset '%s', split '%s'.",
+            "Loading dataset %r, split %r.",
             self.dataset_id,
             self.split,
         )
 
-        dataset = load_dataset(
-            path=self.dataset_id,
-            split=self.split,
-            streaming=True,
-            cache_dir=(
-                str(self.cache_dir)
-                if self.cache_dir is not None
-                else None
-            ),
+        cache_dir = (
+            str(self.cache_dir)
+            if self.cache_dir is not None
+            else None
         )
 
-        return dataset
+        if self.dataset_id == "nick007x/arxiv-papers":
+            parquet_url = (
+                "https://huggingface.co/datasets/"
+                f"{self.dataset_id}/resolve/main/{self.split}.parquet"
+            )
+
+            logger.info(
+                "Loading metadata from Parquet: %s",
+                parquet_url,
+            )
+
+            return load_dataset(
+                "parquet",
+                data_files={self.split: parquet_url},
+                split=self.split,
+                streaming=True,
+                cache_dir=cache_dir,
+            )
+
+        return load_dataset(
+            self.dataset_id,
+            split=self.split,
+            streaming=True,
+            cache_dir=cache_dir,
+        )
 
     @staticmethod
     def _select_range(
@@ -188,8 +201,8 @@ class ArxivDownloader:
             ) as output_file:
                 with tqdm(
                     total=limit,
-                    desc="Downloading papers",
-                    unit="paper",
+                    desc="Downloading metadata",
+                    unit="record",
                 ) as progress:
                     for record in records:
                         output_file.write(

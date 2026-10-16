@@ -1,0 +1,584 @@
+Noname manuscript No.
+                 (will be inserted by the editor)
+
+
+
+
+
+               Julie Gayon, Eric Bois, & Hans Scholl
+       Dynamics of planets in retrograde mean
+2009    motion resonance
+Feb
+3
+
+             Abstract
+                  In a previous paper (Gayon & Bois 2008a), we have shown the general eﬃ-
+              ciency of retrograde resonances for stabilizing compact planetary systems. Such
+               retrograde resonances can be found when two-planets of a three-body planetary
+             system are both in mean motion resonance and revolve in opposite directions. For
+              a particular two-planet system, we have also obtained a new orbital ﬁt involving
+             such a counter-revolving conﬁguration and consistent with the observational data.
+                  In the present paper, we analytically investigate the three-body problem in this[astro-ph.EP]         particular case of retrograde resonances. We therefore deﬁne a new set of canon-
+                ical variables allowing to express correctly the resonance angles and obtain the
+             Hamiltonian of a system harboring planets revolving in opposite directions. The
+              acquiring of an analytical “rail” may notably contribute to a deeper understand-
+              ing of our numerical investigation and provides the major structures related to the
+                 stability properties. A comparison between our analytical and numerical results is
+               also carried out.
+           Keywords Hamiltonian Systems  Planetary Systems  Resonance  Periodic                                                                               ·                                ·                    ·              OrbitsarXiv:0902.0428v1
+
+
+
+
+
+               Nice  Sophia-Antipolis  University, CNRS,  Observatoire de  la  Cˆote d’Azur,  Laboratoire
+                  Cassiop´ee, B.P. 4229, F-06304 Nice Cedex 4, France
+                E-mail: Julie.Gayon@oca.eu
+
+2
+
+1 Introduction
+
+The simplicity and elusiveness of the full three-body problem have captived math-
+ematicians for centuries. Still today, because of its non-integrability, the three-
+body problem remains tricky. It has been solved for particular cases, by reducing
+the number of degrees of freedom. One of the ﬁrst major results is the deter-
+mination of families of periodic orbits in the three-body problem under certain
+assumptions (see for instance H´enon 1976 or Hadjidemetriou 1976).
+   Since the ﬁrst observations of extrasolar systems, the interest of the general
+three-body problem has been boosted, mainly under the coplanar assumption.
+Moreover, the occurrence of bodies in Mean Motion Resonances (MMR) allowed
+to study the stability of several two-planet systems (see e.g. Hadjidemetriou 2002,
+2008 or Callegari et al. 2004). The secular behavior of two-planet systems has
+been investigated as well (e.g. Henrard & Libert 2008). Because most presently
+known extrasolar planets move on eccentric orbits, Beaug´e & Michtchenko (2003)
+investigated the eccentric, coplanar three-body problem to characterize the dy-
+namics of such two-planet systems.
+   Faced to the detection of multi-planetary systems (one star and 2 planets or
+more), and to the increasing number of degrees of freedom, numerical methods of
+global analysis have been performed in order to study their dynamical stability. By
+combining N-body integrators with numerical tools for detection of chaos (notably
+fast indicators or frequency analyses), the exploration of the N-body planetary
+problem (with N ≥3) is accessible from numerical methods. As a consequence,mechanisms generating stability of multi-planetary systems can be identiﬁed and
+explained. For instance, mechanisms involving a MMR as well as an Apsidal Syn-
+chronous Precession1 (ASP hereafter) have been intensively studied (e.g. Lee &
+Peale 2002, 2003; Bois et al. 2003, Ji et al. 2003). A solution involving both
+MMR and ASP describes well the stability of eccentric, compact multi-planetary
+systems, but may not however be unique. We note, for example, that other multi-
+planetary systems have been found to be mainly controlled by secular dynamics
+(e.g. Michtchenko et al. 2006 or Ji et al. 2007). In Gayon & Bois (2008a), by using
+a numerical method of global analysis,2 we found a novel stabilizing mechanism
+involving a retrograde MMR in a two-planet system, which means that the two
+planets are both in MMR and revolve in opposite direction.3 Let us note that the
+diﬀerence between a prograde MMR and a retrograde MMR does not only lie
+in the retrograde motion of one of the two planets. The mechanisms of stability
+related to a retrograde MMR and their underlying properties diﬀer from the pro-
+grade case. Such stabilities are generally more robust (see Gayon & Bois 2008a,
+2008b).
+   The assumption that two giant planets are in a MMR and revolving in oppo-
+site directions around their hosting star is apparently contradicting to the most
+accepted formation theory of planetary systems, notably to the formation and evo-
+lution of the resonant planetary systems (core accretion mechanism combined by
+
+  1 In case of ASP, the apsidal lines on average precess at the same rate.
+  2 We used the MIPS (Megno Indicator for Planetary Systems) method based on the MEGNO
+technique (Mean Exponential Growth factor of Nearby Orbits; see Cincotta & Sim`o 2000).
+  3 For instance, the inner planet has a prograde direction while the outer planet a retrograde
+one. In the following, we will also use the terminology of “counter-revolving conﬁguration”.
+
+                                                                           3
+
+a planetary migration scenario). However, in Gayon & Bois (2008a), we present
+two feasible processes leading to planets revolving in opposite directions. The
+ﬁrst scenario has been introduced by Nagasawa et al. (2008) and consists in the
+combination of a planet-planet scattering, a tidal circularization and Kozai mech-
+anisms. Starting from a hierarchical 3-planet system and considering a migration
+mechanism including a process of planet-planet scattering and tidal circulariza-
+tion, the authors show that close-in planets may be formed. In a few cases, due
+to the Kozai mechanim, one planet enters a retrograde motion. The second feasi-
+ble process imagined by Varvoglis (private discussions) and ourselves is related to
+the capture of free-ﬂoating planets. By integrating the trajectories of planet-sized
+bodies that encounter a coplanar two-body system (a Sun-like star and a Jupiter
+mass), Varvoglis ﬁnds that the probability of capture is signiﬁcant, and, morever,
+that the percentage of free-ﬂoating planets captured is higher for retrograde mo-
+tions than for prograde motions. As a consequence, it would be possible to ﬁnd
+one day some planetary systems in counter-revolving conﬁguration.
+    In the case of a two-planet system, analytical and numerical methods are com-
+plementary. Besides, the acquiring of an analytical “rail” contributes to a deeper
+understanding of the numerical exploration. As a result, the analytical approach
+permits to study thoroughly the numerical results. By plotting surfaces of sec-
+tions, it provides the major structures related to the stability properties. As a con-
+sequence, in the present paper, we propose a Hamiltonian expansion based on this
+novel and feasible stabilizing mechanism introduced in Gayon & Bois (2008a
+and 2008b). We therefore investigate the three-body problem in the particular
+case of retrograde resonances, adapting the Hamiltonian approach of Beaug´e &
+Michtchenko (2003) ﬁrstly expanded for eccentric, coplanar, and prograde orbits.
+From this analytical expansion, we can correctly derive the expression of reso-
+nance angles in the case of a retrograde MMR. A comparison with the numerical
+results obtained in Gayon & Bois (2008a) is also carried out.
+    In the present paper, we ﬁrstly introduce the general expressions of the Hamil-
+tonian as well as the canonical variables in the case of two massive planets mov-
+ing around their host star (Section 2). We note that a dynamical system composed
+of two satellites orbiting a planet is also an equivalent problem. All the results
+shown in the present paper may therefore be applied to satellite systems. The con-
+sideration of planets revolving in opposite directions involves new expressions for
+canonical variables presented in Section 3. We adapt the disturbing function of the
+Beaug´e & Michtchenko model to retrograde motions in Section 4. In Section 5, we
+express the Hamiltonian for retrograde resonances. An orbital ﬁt of the HD 73526
+planetary system involving a 2:1 retrograde MMR was found consistent with the
+observational data in Gayon & Bois (2008a). As a consequence, in Section 6, we
+apply the analytical model to the HD 73526 planetary system ruled in such condi-
+tions and compare our numerical and analytical results. Finally, in Section 7, our
+results obtained by the analytical expansion are visualized by surfaces of section.
+
+4
+
+2 General expression of the Hamiltonian
+
+We suppose a star of mass M0 and 2 planets of mass m1 and m2 such as
+M0 ≫m1, m2 and moving around their barycenter. We choose to express theHamiltonian of the system in the heliocentric frame by using the following De-
+launay variables :
+                     Mi        Li  =  βi √µiai
+                                                                                 (1)                        ωi      Gi  =  Li                                                                                                               i                       q1 −e2
+                        Ωi      Hi  = Gi cos Ii
+with ai,ei,Ii,Ωi,ωi, and Mi the geometrical orbital elements of the planet i, and
+µi = G √M0 + mi. G is the gravitational constant. βi = M0 mi/(M0 + mi) is the
+reduced mass for the planet i.
+   The Hamiltonian of the system (denoted F) consists of a Keplerian part (F0)
+and a disturbing function (F1) :
+                                            2  µ2i β3i
+                        F0 = − Xi=1                                   2L2i                                   (2)  F = F0 + F1   with
+                                    1  m1m2
+                        F1 = −Gm1m2 ∆+ M0  (˙x1 ˙x2 + ˙y1˙y2 + ˙z1˙z2)                                                                                                                                                                                                                                                                                                                                                       The leading part of the disturbing function, called the direct part, depends on the
+instantaneous distance between the two planets (∆). Owing to the choice of the
+origin of the coordinate systems, the second part of F1 is called the indirect part of
+the disturbing function. F1 depends on the barycentric velocities (˙xi, ˙yi, ˙zi) of each
+planet, expressed in cartesian coordinates.
+   To study the 3-body problem, diﬀerent sets of canonical variables can be used,
+depending on the simpliﬁcations carried out for reducing the number of degrees
+of freedom. For instance, Beaug´e & Michtchenko (2003) applied the so-called
+modiﬁed Delaunay variables to solve the coplanar, prograde and eccentric 3-body
+problem. In the present paper, we deﬁne a new set of canonical variables, espe-
+cially devoted to planets revolving in opposite directions.
+
+3 Set of canonical variables for planets revolving in opposite directions
+
+In this study, we choose to set a prograde direction of revolution for the inner
+planet (noted 1) and a retrograde one for the outer planet (noted 2). From the
+previous set of Delaunay variables (1), we therefore deﬁne the two following sets
+of canonical variables for planets 1 and 2 respectively :
+          λ1 = M1 + ˜ω1           L1     = β1 √µ1a1
+
+                                                                                 (3)         −˜ω1 = −(Ω1 + ω1)         L1 −G1  = L1(1 − q 1 −e21)
+       −Ω1                  G1 −H1  = L1 q 1 −e21(1 −cos I1)                                                                                               
+
+                                                                           5
+
+         λ2 =    + ˜ω2              =     √µ2a2          −M2            −L2      −β2
+                                                                                 (4)        −˜ω2 = −(Ω2 −ω2)        G2 −L2  = −L2(1 − q 1 −e22)
+       Ω2                  G2 + H2  =   L2                                          + cos I2)                           q 1 −e22(1   The ﬁrst set of canonical variables (3) corresponds to the well-known modiﬁed
+Delaunay canonical variables while the second one (4) is developed for retrograde
+planetary motion. λi is the mean longitude of the planet i. We note that the longi-
+tude of periastron is deﬁned by: ˜ω = Ω+ω, for a coplanar and prograde planetary
+motion (which is equivalent to consider I = 0◦) and by ˜ω = Ω−ω, for a coplanarand retrograde planetary motion (equivalent to I = 180◦). Restricting the study
+to a coplanar but counter-revolving problem, the set of canonical variables of the
+system can be simpliﬁed as follows :
+
+                              λ1      L1
+                              λ2    −L2                                   (5)
+                              −˜ω1      L1 −G1
+                              −˜ω2     G2 −L2
+
+4 Expansion of the disturbing function
+
+The method used for the expansion of the disturbing function originates from
+Beaug´e & Michtchenko (2003). They expanded an expression for the Hamiltonian
+that is valid for high eccentricities of one or both planets. Their method provides
+a good assessment of the disturbing function when planets are close to the colli-
+sion point. Hence, the solution converges in all points of the phase space except
+for the singularities (corresponding to planetary collisions). Moreover, the rate of
+convergence does not depend on the values of eccentricities but rather on the order
+of magnitude of the distribution function itself. Besides, depending on the studied
+planetary system, even for very eccentric orbits, the rate of convergence of the
+disturbing function may be relatively fast.
+    Classical methods such as Laplace 1799 or Kaula 1962 were expanded for
+coplanar and quasi-circular orbits and were useful for studying dynamics of the
+Solar System (or hierarchical systems in general). Nonetheless, due to the de-
+tection of eccentric exo-planetary systems, new and speciﬁc expansions of the
+disturbing function were needed. As a consequence, the Beaug´e & Michtchenko
+method seems much more suitable for such eccentric planetary orbits. To apply
+this method for counter-revolving conﬁgurations, we propose to expand again the
+disturbing function, by considering the prograde motion of the inner planet and
+the retrograde motion of the outer planet.
+
+
+4.1 Direct part of the disturbing function
+
+The direct part of the disturbing function that generally encounters problems of
+convergence may be expressed as a function of the heliocentric radial distances ri
+
+6
+
+of both planets and the ψ angle between both bodies as seen from the star :
+
+                     1
+                                 (r21 + r22        cos ψ)−1/2                       (6)             ∆=       −2r1r2
+We note that for counter-revolving conﬁgurations, the angle ψ between both bod-
+ies is deﬁned by4 :
+                     ψ = f1 + f2 + ∆˜ω                              (7)
+with  fi the true anomaly of the planet i, ∆˜ω = ˜ω1 −˜ω2 and ˜ω{1,2} deﬁned in (3) and(4). A concise expression of the previous equation is written in (8) by taking into
+account the ratio ρ = r1/r2 such as :
+                             r2                               (1 + ρ2     cos ψ)−1/2                         (8)             ∆=     −2ρ
+The key of the Beaug´e & Michtchenko (2003) method lies in the expansion in
+power series in a new variable noted x and corresponding to a measurement of the
+proximity of the initial condition to the singularity in 1/∆:
+
+                              r2               N                               (1 + x)−1/2      bnxn                         (9)             ∆=        ≃ Xn=0
+with x = ρ2 −2ρ cos ψ. r2/∆has a singularity at x = −1. The determination ofthe coeﬃcients bn is performed by the way of a linear regression for x values
+greater than −1 + δ, δ being a positive parameter close to zero. A good precisionof the direct part of the disturbing function may be reached for a good compromise
+between the δ value and the choice of N order in the series expansion. Contrary to
+classical methods involving Fourier series of the ψ variable or power series in ρ,
+not only the convergence rate of this method is improved but also the expansion
+of the disturbing function can be applied for eccentric two-planet systems. More
+details can be found in Beaug´e & Michtchenko (2003).
+   From (9) and by using the explicit expression of x, we ﬁnd :
+
+                        r2    N                      l                                         bl           ρ2l−k cosk ψ                  (10)           ∆≃          (−2)k k !        Xl=0 lXk=0
+
+Changing from powers of cos ψ to multiples of ψ and by using the explicit expres-
+sion of the ψ angle, one obtains :
+
+     a2    N  N−l              r1       r2               2 Al,u α2u+l                   cos (l f1 + l f2 + l∆˜ω)       (11)   ∆≃                   a1 !2u+l  a2 !−2u−l−1   Xl=0 Xu=0
+
+                                                    l+t                  1/2 if l = 0
+                                        l+2t−2u     t−u        (  1 if l > 0with Al,u = (−1)l Pmin(2u,N−l)t=u         bl+t           l+2t−2u  γl, γl =
+  4 For both prograde orbits, the ψ angle is deﬁned by: ψ = f1 −f2 + ∆˜ω with ˜ωi = Ωi + ωi.
+
+                                                                           7
+
+   The direct part of the disturbing function may be expressed in terms of mean
+anomaly by using the Fourier expansion of the following functions (e.g. Hughes
+1981) :
+                         r  n         ∞
+                             cos(l f)  =       Xn,lm cos(mM)                   a            X                                m=−∞                               (12)
+                         r  n          ∞
+                                sin(l f)  =       Xn,lm sin(mM)                   a             X                                m=−∞
+with Xn,lm the Hansen coeﬃcient function of the eccentricity (Kaula 1962) :
+                          ∞
+                               Xn,lm = e|l−m| Xs=0 Yn,ls+w1,s+w2e2s                      (13)
+with Yn,ls+w1,s+w2 the Newcomb operators, w1                           = max(0, m−l) and w2 = max(0, l−m).Let us recall that the Newcomb operators obey to simple recurrence relations
+(Brouwer & Clemence 1961; Murray & Dermott 1999).
+    Substituting (13) into (12), we obtain :
+                     r  n         ∞  ∞                     j                         cos(l f)  =             Bn,l, j,m e cos(mM)
+                a           Xj=0 X                               m=−∞                                                                           (14)
+                     r  n         ∞  ∞                     j                           sin(l f)  =             Bn,l, j,m e sin(mM)
+                a           Xj=0 X                                m=−∞
+   The direct part of the disturbing function is therefore expressed as follows :
+   a2   ∞   ∞   N  2N                                             j
+                                                           j,k,m,n αi e 1 ek2 cos(mM1 + nM2 + l∆˜ω)  ∆≃             j,k=0X X Xl=0 Xi=0 Al,(i−l)/2 Di,l,             m,n=−∞
+                                                                           (15)
+with Di,l, j,k,m,n = 2 Bi,l, j,m B−i−1,l,k,n and Bi,l, j,m = Yi,lj−|l−m|2  +w1, j−|l−m|2  +w2.
+
+4.2 Indirect part of the disturbing function
+
+From (2), the indirect part of the disturbing function is given by the function T1 :
+                      m1m2                     T1 =         (˙x1 ˙x2 + ˙y1˙y2 + ˙z1˙z2)                    (16)
+                      M0
+where ˙xi, ˙yi, and ˙zi are the barycentric velocities of the planet i, expressed in carte-
+sian coordinates. In the case of coplanar orbits, the expressions of  ˙xi and ˙yi take
+into account the direction of motion of the planet i. We deﬁne  ˙xi for a prograde
+motion and a retrograde one as follows5 :
+                                       ∂xi                                                  ni   for a progade motion
+                dxi    ∂xi dMi     ∂Mi                     ˙xi =   =       =                                         (17)
+                 dt   ∂Mi  dt                                                  ni   for a retrogade motion                            −∂xi∂Mi  5 A similar equation is obtained for theexpression of ˙yi.
+
+8
+
+Consequently, considering a coplanar problem and planets revolving in opposite
+directions, the indirect part is equal to :
+
+             m2       ∂    x1   ∂    x2     ∂    y1   ∂    y2    T1 =          α−1/2              +                          (18)       −Gm1a2          " ∂M1  a1 ! ∂M2  a2 !  ∂M1  a1 ! ∂M2  a2 !#
+By using (14) and considering the prograde motion of planet 1 and the retrograde
+one of planet 2, one obtains :
+
+           x1     r1            ∞  ∞                     j
+         =      cos(˜ω1 + f1) =            B1,1, j,me 1 cos(˜ω1 + mM1)          a1    a1 !           Xj=0 X                                 m=−∞
+           y1     r1            ∞  ∞                     j
+         =      sin(˜ω1 + f1) =            B1,1, j,me 1 sin(˜ω1 + mM1)          a1    a1 !           Xj=0 X                                m=−∞                               (19)
+           x2     r2            ∞  ∞
+         =                     cos(˜ω2 −f2) =           B1,1,k,nek          a2                 a2 !           Xk=0 X          2 cos(˜ω2 −nM2)                                   n=−∞
+           y2     r2            ∞  ∞
+         =                       sin(˜ω2 −f2) =           B1,1,k,nek          a2                 a2 !           Xk=0 X          2 sin(˜ω2 −nM2)                                   n=−∞
+Substituting these results into (18), we ﬁnd :
+           Gm1m2 ∞   ∞   2N         T1 =                             ¯Aiαi
+                  a2                                   j,k=0X X Xi=0                                     (20)                            m,n=−∞
+                                    + nM2 + ∆˜ω)                          mnB1,1, j,mB1,1,k,ne 1ekj  2 cos(mM1                ×
+                                                                 i=0 ¯Aiαi.where ¯Ai are constant coeﬃcients such as : α−1/2 = P2N
+   By combining (15) and (20), we obtain the complete expression of the disturb-
+ing function as follows :
+            ∞   ∞   N  2N                            j
+ F1 =                                    Ri, j,k,m,n,l αi e 1 ek2 cos(mM1 + nM2 + l∆˜ω) (21)     −Gm1m2a2                        j,k=0X X Xl=0 Xi=0                    m,n=−∞
+where Ri, j,k,m,n,l =             Di,,l, j,k,m,n       ¯Aim n B1,1, j,m B1,1,k,n are constant coeﬃ-                         Al,(i−l)/2          −δl,1cients. Ri, j,k,l,m,n,l are independent of initial conditions and then require to be de-
+termined once. We are now able to express the angles of resonance in the case of
+counter-revolving conﬁgurations as shown in the following section.
+
+5 The resonant average Hamiltonian
+
+Considering planets close to a MMR and revolving in opposite directions, we
+deﬁne the MMR ratio by p + q/p with p , 0 and p < 0. For instance, when two
+planets revolve in opposite direction and have a period ratio of 2, the q order of
+
+                                                                           9
+
+resonance is equal to 3 and p = −1. We set s = p/q and deﬁne the following setof canonical variables in the case of a retrograde MMR :
+         λ1                                 J1 =   L1 + s(I1 + I2)
+         λ2                                 J2 = −L2 −(1 + s)(I1 + I2)
+                                                                           (22)
+       σ1 = (1 + s)λ2 −sλ1 −˜ω1            I1 =   L1 (1 − q 1 −e21)
+       σ2 = (1 + s)λ2 −sλ1 −˜ω2            I2 = −L2 (1 − q 1 −e22)
+where σ1 and σ2 are the resonant angles while I1 and I2 are the conjugate mo-
+menta depending on the eccentricities e1 and e2.
+
+   Let θ be the following angle of the disturbing function such as : θ = mM1 +
+nM2 + l∆˜ω. Considering the new set of variables, the expression of θ becomes :
+               θ = mσ1 −nσ2 + l(σ2 −σ1) + [m(p + q) −np]Q           (23)
+where qQ = (λ1 −λ2) is the synodic angle. Hence, the disturbing function dependson three angular variables (σ1, σ2, Q). Considering the new set of canonical vari-
+ables (σ1, σ2, Q, λ2; I1, I2, qJ1, J1 + J2), we ﬁnd the following constant of motion :
+                                J1 + J2 = constant                          (24)
+   As a consequence, our system has therefore two integrals of motion: the F
+Hamiltonian and Jtot = J1 + J2. It is well known that the frequency of the angle
+Q is much higher than that of σi. As a consequence, we consider only long period
+perturbations in the Hamiltonian. The system is then averaged with respect to the
+synodic angle as follows :
+                              1     2π                                     ¯F1 =       F1dQ                          (25)                             2π Z0
+The averaging over the Q variable written in (25) implies a third constant of mo-
+tion, namely J1. As a consequence, the system consists of four degrees of freedom
+and three constants of motion. From now on, the system can be reduced to four in-
+dependent variables, namely σ1, σ2, I1 and I2. Taking into account the condition of
+MMR (n = m(p + q)/p), we obtain the ﬁnal expression of the disturbing function
+(26) and the average Hamiltonian (27) respectively, for a retrograde resonance :
+                                                jmax kmax   mmax    lmax 2N
+                   ¯F1 =                                                      ¯Ri, j,k,m,l              −Gm1m2a2         Xj=0 Xk=0 X Xl=0 Xi=0                        (26)                                       m=−mmax
+                                  + (l                               αie 1ekj  2 cos((m                    ×            −l)σ1    −n)σ2)
+           2  µ2i β3i                                                            j                                        + (l         (27)  ¯F =                                               ¯Ri, j,k,m,l αi e 1 ek2 cos((m    −           −Gm1m2a2           2L2i  Xi=1                                                              i, Xj,k,m,l                   −l)σ1    −n)σ2)
+   Due to D’Alembert’s properties of the disturbing function, some coeﬃcients
+are null if one (or more) of the following conditions is reached : 1)  j < |m −l|, 2)
+k < |l −n|, 3) (m −l) even (odd) number and j odd (even) number, 4) (l −n) even(odd) number and k odd (even) number.
+
+10
+
+6 Comparison with numerical methods
+
+Using the ﬁnal expression of the Hamiltonian, the J1 and J2 constants of motion
+as well as the following set of canonical variables,
+          σ1 = (1 + s)λ2 −sλ1 −˜ω1         I1 =  L1(1 − q 1 −e21)        (28)
+          σ2 = (1 + s)λ2 −sλ1 −˜ω2         I2 = −L2(1 − q1 −e22)
+we can ﬁrstly integrate a two-planet system both in counter-revolving conﬁgu-
+ration and in MMR and secondly, compare the analytical results with numerical
+ones. Using a Bulirsch-Stoer method, we integrate numerically the following dif-
+ferential equations :
+
+                                                            ˙Ii =      =                          −∂¯F∂σi     −∂¯F1∂σi                                                                           (29)
+                                     ∂¯F       ∂¯F1   ∂F0                                   ˙σi =      =      +
+                                        ∂Ii         ∂Ii     ∂Ii
+   For the integration of (29), we use our initial conditions for the HD 73526
+system, located very close to the 2:1 retrograde MMR (i.e. at the edge of a V-
+shape structure in a stability map in [a, e] orbital elements; see Gayon & Bois,
+2008a) :
+                       M0 = 1.08 M⊙
+            M1 = 2.9 MJup           M2 = 2.5 MJup
+                  a1 = 0.66 AU                 a2 = 1.05 AU
+                                                                           (30)
+                   e1 = 0.19                      e2 = 0.14
+              σ1 = 94 (deg)             σ2 = 94 (deg)
+Such initial conditions (30) are suﬃciently close to the retrograde MMR to ap-
+ply our analytical expansion.6 These initial conditions (more paticularly the semi-
+major axes) are averaged for the analytical expansion.
+    Fig. 1 shows the time evolution of eccentricity of both planets. Dots represent
+the numerical solution while black curves the analytical one.7 Both solutions ex-
+press the same behavior, with a relative error of 1.2% and 10%, on average, over
+the eccentricity of the inner orbit and the outer orbit, respectively (absolute er-
+rors being 0.002 for e1 and 0.005 for e2 on average). Due to the averaging of the
+Hamiltonian over short periods, numerical dots are scattered on both sides of the
+analytical solution.
+    Fig. 2 shows the time variation of the variable ∆σ. Because the e2 eccentricity
+periodically reaches the zero value, the numerical method does not always permit
+to determine the value of the ∆σ angle. This phenomenon is expressed by the
+vertical scattering of dots from 0 to 360 degrees. As a consequence, surfaces of
+
+  6 We forecast to study various initial conditions in a forthcoming paper, notably for a “full”
+retrograde resonance.
+  7 More details on the used numerical method and corresponding results may be found in
+Gayon & Bois (2008a).
+
+                                                                          11
+
+section obtained numerically comprise this numerical bias. The analytical method
+is therefore more reliable when the eccentricity of a planet reaches values close to
+zero. Besides, the analytical approach ensures the properties of stability found for
+each planetary system.
+
+
+
+
+
+Fig. 1 Time variation of the eccentricites e1 and e2 for the HD 73526 planetary system in 2:-1
+MMR. Red dots represent the numerical solution while black curves the analytical one. Used
+initial conditions are given by: M0 = 1.08 M⊙; M1 = 2.9 MJup ; M2 = 2.5 MJup ; a1 = 0.66 ;a2 = 1.05 ; e1 = 0.19 ; e2 = 0.14 ; σ1 = 94 ; σ2 = 94.
+
+
+
+
+
+Fig. 2 Time variation of the ∆σ variable (where ∆σ = σ1 −σ2) for the HD 73526 planetarysystem in 2:-1 MMR. Red dots represent the numerical solution while black curves the analytical
+one. Used initial conditions are the same as in Fig. 1.
+
+12
+
+7 Surfaces of section
+
+Nature of planetary systems can be directly deduced from the behavior of the
+resonance variables. As a consequence, from the previous Hamiltonian expansion
+(27) of the three-body problem, we can plot surfaces of section and study the
+dynamics of two planets in retrograde MMR.
+    Fig. 3 shows surfaces of section plotted for the HD 73526 planetary system
+previously deﬁned. The energy level corresponding to the initial conditions (30)
+was numerically evaluated as −0.13835250 (units of AU, solar mass, and year).
+With our analytical expansion, we obtain the Hamiltonian value of −0.13835197,which is in good agreement with our numerical results. Panel (a) of Fig. 3 cor-
+responds to the inner planet and is plotted in the (e1 cos σ1 , e1 sin σ1) parameter
+space. The section plane for the inner planet is chosen such as σ2 = 0. Similarly,
+panel (b) is plotted for the outer planet in the (e2 cos σ2 , e2 sin σ2) parameter
+space and using the plane σ1 = 0. The initial conditions corresponding to (30) are
+plotted in red. All the solutions found for ¯F = −0.138352 are quasi-periodic.    In panels (a) and (b) of Fig. 3, we represent the circulation state of the σ1 and
+σ2 variables in black and red colors. The libration state about 0◦is plotted in blue;
+such initial conditions are located inside the 2 : 1 retrograde MMR. Nevertheless,
+for all the sets of initial conditions required for plotting Fig. 3, the time variation
+of σ1 and σ2 expresses a circulation (in time) of both variables (not shown here).
+This time circulation seems contrary to the possible behavior in libration of σ1
+and σ2 shown on our surfaces of section. Such initial condition sets inside the
+2 : 1 retrograde MMR and their behaviors could therefore point out a particular
+characteristic of retrograde MMR. Such a characteristic would deserve a speciﬁc
+study.
+
+
+
+
+
+ (a)     0.2                                         (b)   0.15
+        0.15                                                                   0.1
+         0.1
+                                                              0.05        0.05
+σ1                             σ2
+ sin      0                                           sin      0
+e1   -0.05                        e2                                                                 -0.05
+         -0.1
+                                                                     -0.1       -0.15
+         -0.2                                                    -0.15
+             -0.2 -0.15 -0.1 -0.05  0  0.05 0.1 0.15 0.2               -0.15  -0.1  -0.05   0    0.05   0.1   0.15
+                            e1 cos σ1                                                e2 cos σ2
+Fig. 3 Surfaces of section for the inner (a) and the outer (b) planets of the HD 73526 system
+found close to a 2:-1 MMR. The value of ¯F is −0.138352. Initial conditions (30) are representedby the red curve. Black and blue curves respectively correspond to circulation and libration of
+the σi variables in the plane σ j,i = 0.
+
+                                                                          13
+
+8 Conclusion
+
+In the present paper, we investigated the three-body problem in the particular case
+of retrograde resonances. Our study is derived from the Hamiltonian approach of
+Beaug´e & Michtchenko (2003), which was expanded for eccentric, coplanar and
+prograde orbits. To apply this method to the retrograde MMR case, we expanded
+again the disturbing function, when considering a prograde motion of the inner
+planet and a retrograde motion of the outer planet. Hence, we deﬁned a new set of
+canonical variables, which allow us to express correctly the angles of resonance
+in the case of counter-revolving conﬁgurations.
+   Although the exploration of the N-body problem is accessible from numerical
+methods, the acquiring of an analytical “rail” notably contributes to a deeper un-
+derstanding of the numerical investigation. As shown in Section 6, the analytical
+method also permits a better determination of the resonance variables. Moreover,
+from the behavior of the resonance angles displayed in surfaces of section, we can
+directly infer the local behavior of a 3-body system, that is to say its stability or
+its chaoticity.
+    Until now, no planetary system has been truly detected in counter-revolving
+conﬁguration. However, given the eﬃciency for stability of retrograde MMR (see
+Gayon & Bois 2008b), such a detection might occur. The work presented in this
+paper is ﬁrstly based on a dynamical study of theoretical two-planet systems. Nev-
+ertheless, a dynamical system composed of two satellites orbiting a planet is an
+equivalent problem. Since some satellites of Saturn are found in counter-revolving
+motions, our expansion of the three-body problem solved in the case of retrograde
+motions could then be applied for satellites of the Solar System.
+
+Acknowledgements We thank the anonymous referees for their useful comments and sugges-
+tions that helped to improve the paper.
+
+
+A Appendix
+
+This appendix shows the analytical expansion when the body moving on a retrograde orbit is
+the inner planet. The new set of canonical variables for the resonant averaged Hamiltonian is
+written as follows (equivalent to 22) :
+              λ1                                   J1 = −L1 + s(I1 + I2)
+              λ2                                   J2 =   L2 −(1 + s)(I1 + I2)
+                                                                                        (31)            σ1 = (1 + s)λ2                           I1 =     (1    1    1)                      −sλ1 −˜ω1           −L1  − q −e2
+            σ2 = (1 + s)λ2 −sλ1 −˜ω2              I2 =   L2 (1 − q1 −e22)
+with λ1 = −M1 + ˜ω1, λ2 = −M2 −˜ω2, ˜ω1 = Ω1 −ω1 and ˜ω2 = Ω2 + ω2.    Although the set of canonical variables changes, the expression of the resonant averaged
+Hamiltonian remains the same :
+                     2  µ2i β3i                                                            j                                              + (l              (32)              ¯F =                                               ¯Ri, j,k,m,l αi e1 ek2 cos((m         −                                                     −l)σ1    −n)σ2)                −Gm1m2a2        i, Xj,k,m,l     Xi=1 2L2i
+
+14
+
+References
+
+Beaug´e, C., Michtchenko, T. A. : Modelling the high-eccentricity planetary three-
+  body problem. Application to the GJ876 planetary system. MNRAS 341, 760–
+  770 (2003)
+Bois, E., Kiseleva-Eggleton, L., Rambaux, N., Pilat-Lohinger, E. : Conditions
+  of dynamical stability for the HD160691 planetary system. Astrophys. J. 598,
+  1312–1320 (2003)
+Brouwer, D., Clemence, G. M. : Methods of Celestial Mechanics, Academic Press,
+  New York (1961)
+Callegari, N., Jr., Michtchenko, T. A., Ferraz-Mello, S. : Dynamics of two planets
+   in the 2/1 mean-motion resonance. Celest. Mech. Dyn. Astr. 89, 201–234 (2004)
+Cincotta, P., Sim´o, C. : Simple tools to study global dynamics in non-axisymmetric
+   galactic potentials. Astron. Astrophys. Supp. 147, 205–228 (2000)
+Gayon, J., Bois, E. : Are retrograde resonances possible in multi-planet systems?
+  Astron. Astrophys. 482, 665–672 (2008a)
+Gayon, J., Bois, E. : Retrograde resonances in compact multi-planetary systems :
+  a feasible stabilizing mechanism. In : Sun, Y. S., Ferraz-Mello, S., Zhou, J. L.
+   (eds.) Exoplanets : Detection, Formation and Dynamics (IAU Symp. 249), IAU
+   Proc., vol. 3, pp. 511–516, Cambridge University Press, Cambridge (2008b)
+Hadjidemetriou, J. D. : Families of periodic planetary-type orbits in the three-body
+  problem and their stability. Astrophys. Space Science 40, 201–224 (1976)
+Hadjidemetriou, J. D. : Resonant periodic motion and the stability of extrasolar
+  planetary Systems. Celest. Mech. Dyn. Astr. 83, 141–154 (2002)
+Hadjidemetriou, J. D. : On periodic orbits and resonance in extrasolar planetary
+  systems. Celest. Mech. Dyn. Astr. 102, 69–82 (2008)
+H´enon, M. : A family of periodic solutions of the planar three-body problem and
+   their stability. Celest. Mech. 13, 267–285 (1976)
+Henrard, J., Libert, A. S. : Periodic orbits as centers of stability in the secular 3D
+  planetary three body problem. Celest. Mech. Dyn. Astr. 102, 177–189 (2008)
+Hughes, S. : The computation of tables of Hansen coeﬃcients. Celest. Mech. 25,
+  101–107 (1981)
+Ji, J., Kinoshita, H., Liu, L., Li, G., Nakai, H. : The apsidal antialignment of the
+  HD82943 system. Celest. Mech. Dyn. Astr. 87, 113–120 (2003)
+Ji, J., Kinoshita, H., Liu, L., Li, G. : The secular evolution and dynamical archi-
+   tecture of the neptunian triplet planetary system HD69830. Astrophys. J. 657,
+  1092–1097 (2007)
+Kaula, W. M. : Development of the lunar and solar disturbing functions for a close
+   satellite. Astron. J. 67, 300–303 (1962)
+Laplace, P. S. : Trait´e de M´ecanique C´eleste, Imprimerie Royale, Paris (1799)
+Lee, M. H., Peale, S. J. : Dynamics and origin of the 2:1 orbital resonances of the
+  GJ876 planets. Astrophys. J. 567, 596–609 (2002)
+Lee, M. H., Peale, S. J. : Secular evolution of hierarchical planetary systems. As-
+  trophys. J. 592, 1201–1216 (2003)
+Michtchenko, T. A., Ferraz-Mello, S., Beaug´e, C. : Modeling the 3-D secular plan-
+  etary three-body problem. Discussion on the outer υ Andromedae planetary
+  system. Icarus 181, 555–571 (2006)
+
+                                                                          15
+
+Murray, C. D., Dermott, S. F. : Solar System Dynamics, Cambridge University
+  Press, Cambridge (1999)
+Nagasawa, M., Isa, S., Bessho, T. : Formation of hot planets by a combination of
+  planet scattering, tidal circularization, and the Kozai mechanism. Astrophys. J.
+  678, 498–508 (2008)

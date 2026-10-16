@@ -1,0 +1,352 @@
+Mon. Not. R. Astron. Soc. 000, 1–7 (2009)      Printed 28 October 2018   (MN LATEX style ﬁle v2.2)
+
+   The gravitational wave background from star-massive black hole
+    ﬂy-bys
+
+      Silvia Toonen1,2 ⋆, Clovis Hopman1 and Marc Freitag3
+         1Leiden Observatory, Leiden University, P.O. Box 9513, 2300 RA Leiden, The Netherlands
+         2Department of Astrophysics, IMAPP, Radboud University Nijmegen, P.O. Box 9010, 6500 GL Nijmegen, The Netherlands2009
+           3Institute of Astronomy, University of Cambridge, Madingley Road, CB3 0HA Cambridge, UK
+Jun
+        Accepted 2009 May 28. Received 2009 February 17
+18
+                           ABSTRACT
+                                         Stars on eccentric orbits around a massive black hole (MBH) emit bursts of gravitational
+                                 waves (GWs) at periapse. Such events may be directly resolvable in the Galactic centre. How-
+                                           ever, if the star does not spiral in, the emitted GWs are not resolvable for extra-galactic MBHs,
+                                       but constitute a source of background noise. We estimate the power spectrum of this extreme
+                                 mass ratio burst background (EMBB) and compare it to the anticipated instrumental noise of
+                                        the Laser Interferometer Space Antenna (LISA). To this end, we model the regions close to
+                                     a MBH, accounting for mass-segregation, and for processes that limit the presence of stars
+                                        close to the MBH, such as GW inspiral and hydrodynamical collisions between stars. We ﬁnd[astro-ph.EP]                                    that the EMBB is dominated by GW bursts from stellar mass black holes, and the magnitude
+                                       of the noise spectrum (fSGW)1/2 is at least a factor ∼10 smaller than the instrumental noise.                             As an additional result of our analysis, we show that LISA is unlikely to detect relativistic
+                                         bursts in the Galactic centre.
+                             Key words: black hole physics — stellar dynamics — gravitational waves — Galaxy: centre
+
+
+
+       1  INTRODUCTION                                              obscuring other types of GW sources. The shape and overall magni-
+                                                                             tude of this EMRI background has been studied by Barack & Cutler
+     A new opportunity to study stellar processes near massive black                                                                               (2004). They do not study the dynamical requirements of inspiral,
+        holes (MBHs)  arises with the anticipated detection of  gravi-                                                                              but scale their result with possible EMRI rates of Freitag (2001,
+         tational waves (GWs) by the Laser Interferometer Space An-                                                                            2003). Therefore noise of stars that do not eventually spiral in is
+        tenna (LISA). LISA  will be a space-based  detector  in  orbit                                                                              not included.
+        around the Sun, consisting of three satellites ﬁve million kilo-arXiv:0902.3253v2 metres apart. It will be sensitive to GWs in a frequency range         Rubbo et al. (2006) show that stars on long periods of a
+       10−4 Hz ≲f ≲10−2 Hz. An important source of GWs for LISA     few years and  nearly  radial  orbits  that  carry them near  the
+                                                                         Schwarzschild radius of the MBH, emit bursts of GWs that for the          is the inspiral of compact objects onto MBHs in galactic nu-
+          clei (e.g. Hils & Bender 1995; Sigurdsson & Rees 1997; Ivanov      Galactic centre will give a signal to noise ratio larger than 5. Taking
+                                                                                    into account processes determining the inner radius of the density        2002; Freitag 2003; Hopman & Alexander 2005, 2006a, 2006b;
+                                                                           proﬁle as well as mass segregation effects, Hopman et al. (2007)       Amaro-Seoane et al. 2007; see Hopman 2006 for a review). These
+         are sources on highly eccentric orbits with periapses slightly larger     ﬁnd that stellar mass black holes (BHs) have a burst rate of order
+        than the Schwarzschild radius rS = 2GM•/c2 of the MBH, where     1andyr−1,whitewhiledwarfsthe rate(WDs).is ≲0.1 yr−1 for main sequence stars (MSs)      M• is the mass of the MBH. The star dissipates energy due to    GW emission, and as a result spirals in. Such extreme mass ra-           Individual bursts from star-MBH ﬂy-bys may be detected
+          tio inspirals (EMRIs) can be observed by LISA to cosmological      from our own Galactic centre, but it is unlikely they will be ob-
+         distances if the orbital period of the star is shorter than P ≲104      served from other galactic nuclei. However, the accumulation of all
+        sec (Finn & Thorne 2000; Barack & Cutler 2004; Gair et al. 2004;       bursts of all galaxies in the universe gives rise to an extreme mass
+       Glampedakis 2005). LISA will detect hundreds to thousands of       ratio burst background (EMBB). Since the energy emitted per event
+        such captures over its projected 3-5 yr mission life time (Gair et al.        is much higher for inspirals compared to ﬂy-bys, but the event rate
+        2004; Gair 2008).                                                                  is much lower (Alexander & Hopman 2003), it is not a priori clear
+            For most of the inspiral the emitted GWs are not observable by     which of these dominates the confuse background. In this paper we
+       LISA. These GWs give rise to a source of confusion noise, possibly      study the contribution of these ﬂy-bys to the GW background. In §2
+                                                        we derive an analytical expression for the event rate of GW bursts
+                                                                                    in a galactic nucleus. This model diverges at several boundaries,
+        ⋆e-mail: s.toonen@astro.ru.nl                                      and we consider in §2.2 what the physical processes are that de-
+
+2   Toonen, Hopman and Freitag
+
+termine the range within which our model is valid. Our formalism       distribution of a species M is not a strict power law in the Fokker-
+is similar to that of the galactic burst rate of Hopman et al. (2007).      Planck models, this implies that our density proﬁle is a good
+We derive an expression for the emitted energy spectrum of GW      approximation only at small radii. Since the burst rate is dominated
+bursts in a single galactic nucleus in §3. A relation for the EMBB       at those small radii (see equation [7]), the small mismatch at larger
+from the accumulation of GW bursts from all redshifts observed       radii will not strongly affect our conclusions.
+by LISA is derived in §3.3. In §4 we compare the resulting EMBB      A useful parametrisation of an orbit is the frequency a star
+to the instrumental noise of LISA (Larson 2001), and to other as-     would have on a circular orbit with radius of its periapse rp,
+trophysical backgrounds. We conclude in §5 and discuss what our
+model implies for the possibility of directly detecting relativistic                                                  ωp    GM• .                                                  (4)bursts of GWs from our Galactic centre.                   ≡ s  r3p
+                                                            Note  that  for  eccentric  orbits ωp ≫1/P  where  P(a) =
+2 THE GRAVITATIONAL WAVE BURST RATE AND          2π(a3/GM•)1/2  is  the  orbital  period. The number  of  stars                                                             n(a,ωp) da dωp in an element (a, a+da),(ωp, ωp +dωp) is then
+  SPECTRUM FROM A SINGLE GALACTIC NUCLEUS
+In this section, we present a simple model for a galactic nucleus                                                                    4CMNh            a  1−αM                                                                                                                                      p     ,   (5)and derive the burst rate for that model. We discard parts of phase-     nM(a,ωp) = (3−αM)   3r2h   (GM•)1/3   rh      ω−5/3space in our model where stars are unlikely to exist due to various
+processes.                                                    where it was assumed that e ≈1.                                           A star on a highly eccentric orbit emits almost all of its GW
+                                                                 energy at periapse in a single GW burst. The burst rate per loga-
+2.1  The gravitational wave burst rate                               rithmic unit of the semi-major axis and frequency at which stars of
+                                                                       species M have a bursting interaction with the MBH is given byA MBH dominates the potential inside the radius of inﬂuence
+rh = GM• ,                                                      (1)       d2ΓM     σ2
+                                                           d lna d lnωp
+where σ denotes the stellar velocity dispersion far away from the
+MBH. The MBH mass is empirically related to the velocity disper-         1         4CMNh            a  2−αM                                      =                                                                                                                                 p           (6)                                                                 P(a) (3−αM)   3rh   (GM•)1/3   rh      ω−2/3sion of the bulge by
+                                4                     =           yr−1       CM ˜M αM/2+1/3 ˜a 1/2−αM ˜ωp −2/3,           σ                                       5.7×10−7    (3−αM)
+M• = 108 M⊙   200 km s−1                                    (2)     where we convert to dimensionless units deﬁned as  ˜ =                                                                                    M•  M•/M◦;
+                                                              =(e.g. Merritt & Ferrarese 2001; Tremaine et al. 2002). Inside the ra-                                             = ωp/ω◦, and M◦= 106M⊙; rh,0                                                                                                                      ˜a = a/rh,◦; ˜ωp                                                                                          GM◦/σ2◦≈1pc;
+dius of inﬂuence, stellar orbits are assumed to be Keplerian.       ω◦= c3/(GM◦) ≈0.2Hz.
+     Galactic nuclei with M• ≲107M⊙have relaxation times lessthan a Hubble time and are dynamically relaxed, while for very                                                                       2.2  The inner region of the stellar cusp
+massive MBHs, the distribution will depend on the initial con-
+ditions. However even in this case the inner region of the cusp      Since we describe the proﬁle of the galactic nucleus by power
+may be of power-law form due to the effect caused by a slow      laws, integration over orbital space leads to formal divergences,
+growth of a black hole inside a stellar system (see e.g. Young 1980;      and it is therefore important to determine the boundaries of va-
+Quinlan et al. 1995). We will for simplicity assume that our mod-        lidity of our model. In the next section we consider a num-
+els also apply for M• > 107M⊙. The contribution of such MBHs is      ber of processes that can determine the inner edge of the stellaronly marginal for the EMBB, and this assumption does not affect      cusp. The burst rate is approximately proportional to dΓM/d lna ∝
+our result.                                                       a1/2−αM (see equation [7]). As typical values for α are in the range
+   We assume the distribution within rh to be spherically sym-      1.4 −2 (see e.g. Hopman & Alexander 2006a; Freitag et al. 2006;metric in space and approximately isotropic in velocity space.      Alexander & Hopman 2009), the GW energy spectrum is domi-
+The radial density proﬁle is approximated by a power law, ν ∝      nated by GW bursts from stellar orbits at small radii and therefore
+r−αM (e.g. Peebles 1972; Bahcall & Wolf 1976), where the slope     we focus on the stellar dynamics in the vicinity of a MBH.
+αM depends on the stellar mass M⋆; due to mass segregation
+Spitzer (1987), larger masses have larger αM. The number of stars
+nM(a,J2) da dJ2 of type M in an element (a, a + da),(J2, J2 +       2.2.1   Gravitational wave inspiral
+dJ2) is then given by                                      As a star loses energy repeatedly with every periapse passage due to
+                                   GW emission, it spirals in. Unresolvable EMRIs constitute a back-
+                                                               ground noise for LISA studied by Barack & Cutler (2004). Our                    CMNh   a  2−αM   1
+nM(a,J2) da dJ2 = (3−αM)   rh      rh            J2c (a) da dJ2,   (3)   study instead focuses on the subset of extreme mass ratio events                                                                               that do not spiral in, and GW emission from EMRIs must be ex-
+where we assume Nh = M•/M⊙. The total number of stars of type      cluded. We note that the dynamics of the progenitors of EMRI noiseM within rh is deﬁned as CMNh.                                  and burst noise is very different. The part of phase space where
+   We  calibrate  the  parameters CM  using  solutions  to       stars spiral in is at any particular time typically not populated, so
+Fokker-Planck  equations   applied   to   the   Galactic   centre        that, e.g., equation (7) does not apply.
+(Alexander & Hopman  2009), such  that  the number  of  stars         The amount of energy ∆EGW that is lost in one period is given
+within 0.01pc agrees with those simulations. Since the density     by Peters & Mathews (1963) as
+
+                                                                 Gravitational wave background   3
+
+                                                                          2.2.2  The direct capture loss-cone
+          8π     M⋆         rp  −7/2                         All stars with an angular momentum less than the last stable orbit∆EGW =             f (e)    M⋆c2            5√ 2                 M•           rs                             JLSO = 4GM•/c (the “loss-cone”) are pulled into the MBH. Since a                                                                                 star in this region of orbit space is removed in a dynamical time, we
+     =                                          p   ,                    (7)                                                           do not consider stars in this region. Therefore stars only contribute           2.8×1049 erg ˜M2⋆˜M4/3•   ˜ω7/3
+where for highly eccentric orbits  f (e) ≈0.39. We deﬁne the char-    GWs to the EMBB ifacteristic time for inspiral ti as the time it takes the initial orbital
+          grow                 formally                             to inﬁnity,energy ε0 to                                                                                                                                                     .                               (13)                                                                           ˜ωp < ˜ωlc ≡4.41×10−2 ˜M−1•        ∞                  ∞          dε                      dε                                                                           In                                                                                          reality                                                                                         the                                                                             empty                                                                                                  region                                                                                                                 inside                                                                                                                      the                                                                                                                       loss-cone                                                                                                                                           willti =            ε0 dε/dt ≈                             ε0 ∆EGW/P(a)       Z                  Z                                                                         also                                                                                     affect                                                                                     the                                                                                       regions                                                                                         nearby                                                                                                               in                                                                                                         angular                                                                                      momentum                                                                                                                          space
+                  yr ˜M−1⋆  ˜M−5/6 ˜a1/2 ˜ω−7/3p     .                  (8)      (Lightman & Shapiro 1977), although this is partially erased by  ≈  2.9×102           •                                                                      resonant  relaxation (Rauch & Tremaine 1996; Rauch & Ingalls
+    While the orbit decays, two body scattering by other stars per-                                                                    1998). Here we assume that orbits outside the loss-cone are fully
+turbs it, changing the orbital angular momentum by order of itself                                                                      populated.
+in a timescale tJ. The magnitude and direction of the step in angu-
+lar momentum is a random walk process, and typically in a relax-
+ation time the step is of the size of the circular angular momentum       2.2.3  The tidal disruption loss-cone
+Jc = (GM•a)1/2, and hence                                            Tidal effects can play a role when the star is not compact. The
+            2       J                                                                         tidal forces from the MBH on the MS disrupt those MSs whose
+tJ =            trelax.                                               (9)
+       Jc                                                                    orbits carry them within the tidal radius rt ≈(2M•/M⋆)1/3R⋆of                                                                        the MBH, where R⋆denotes the radius of the MS. This effect leads
+In this expression trelax is the relaxation time,                                                                           to a depletion of MSs when r < rt, called the loss-cone for tidal
+                                                                           disruptions. We only consider MSs if
+            σ3      a   1/2
+trelax = Crelax                              ,                           (10)                                                                                                             1/2                                                                   M⋆                                                                                          R⋆  −3/2           G2M2⊙nh    rh                                                                                                                                                                                 .            (14)                                                                           ˜ωp < ˜ωtwhere Crelax is a numerical constant that also absorbs the Coulomb           ≡2.18×10−3  M⊙      R⊙
+logarithm, σ is the velocity dispersion far away from the MBH, and                                                            Note that the break up frequency ˜ωt depends solely on the charac-
+nh ∝M−1/2 is the density of stars at the radius of inﬂuence.                teristics of the MS.        •    Due to strong mass-segregation (Alexander & Hopman 2009;
+Keshet et al. 2009), at small radii the relaxation time is dominated
+by BH interactions, while at large distances the MSs dominate the       2.2.4  Hydrodynamical collisions
+relaxation rate. The true relaxation time is a combination of the                                                                 Close to a MBH, MSs are likely to undergo multiple collisions in
+BH and MS relaxation time, and in order to keep the calculation                                                                                their lifetime (see e.g. Spitzer & Saslaw 1966). The rate Γcoll atmore tractable, we approximate it by a power law. As the burst rate                                                            which a MS with radius R⋆has grazing collisions can be estimatedis critically sensitive to the inner cut-off of the density proﬁle, we                                                           by
+chose the constant Crelax to calibrate the relaxation time at a small
+radius       of         0.01pc                   for                      the                     model                                  in                                Alexander & Hopman (2009).                                                                                      a  −αMS                                                                              Nh                                                                                                                                                                                            .     (15)                                                                                   Γcoll = n σcs v = 3−αMS                                                                                    πR2⋆                =For those          values,            we                ﬁnd                                  0.02.                            Crelax                                                                                                     a                                                              4π                                                                                                     r3h    rh                                                 r GM•    With this scaling the relaxation time and scatter time become
+                                                                         Multiple collisions can lead to the disruption of the MS.
+                                                                        Freitag & Benz (2005) showed that on average a MS is disrupted
+                        Crelax       trelax =2.7 Gyr                    0.02 M•˜  ˜a1/2;                                        after Ncoll ≈30 collisions. This implies that MSs are saved from                                                                         disruption by collisions within a Hubble time, if their distance to
+                   Crelax       tJ =240 yr       ˜M4/3 ˜a−1/2 ˜ω−2/3p     .                   (11)       the MBH is larger than                0.02    •
+                                                                                                                          20/19                                                                                           R⋆                                                                                                                           ˜M7/19 ,    (16)      If tJ > ti, stars spiral in faster than they are replenished by           ˜a > ˜acoll               30   10/19other stars. In the corresponding region of orbit space, any bursting           ≡1.6×10−3    Ncoll                        •                                                                          R⊙
+star is quickly accreted, so this region is typically empty (see the                                                            where it was assumed that αMS = 1.4 as in our main model. MSs
+appendix for further details). The fact that this part of phase-space                                                                        are contributing GWs to the EMBB if their orbits obey ˜a > ˜acoll.
+is not populated has also consequences for the possibility of de-
+tecting relativistic bursts in the Galactic centre; see §5 for further
+details. Solving tJ = ti for ωp gives an inner cut-off of                   2.3  Model of a galactic nucleus
+                                                         To summarise, the method to compute the GW burst rate of a single
+˜ωp < ˜ωi       (Crelax )−3/5 ˜M⋆ −3/5    −13/10 ˜a3/5.          (12)       galactic nucleus is as follows. We consider four distinct species of      ≡1.1  0.02                ˜M•                                      stars, that is                                               stars (NSs),                                                          10M⊙BHs, 0.6M⊙WDs, 1.4M⊙neutron                                                                      = 2,   We assume that stars with ˜ωp > ˜ωi always spiral in and we      and 1M⊙MSs. Their density proﬁle is given by a slope of αBHneglect these stars (noise for these stars was accounted for by    αWD = 1.4, αNS = 1.5, αMS = 1.4 (Alexander & Hopman 2009).
+Barack & Cutler 2004), while stars with ˜ωp < ˜ωi never spiral in,    We assume that the enclosed number of MS stars within rh  is
+and we take these stars into account as bursting sources.             Nh = M•/M⊙. We calibrate our model such that for the Galactic
+
+4   Toonen, Hopman and Freitag
+
+centre, the number of stars within 0.01pc is equal to that found       to be constant throughout the history of the Universe,
+in Alexander & Hopman (2009), to ﬁnd CBH = 8  10−3, CWD =                          ×                          1070.09, CNS = 0.01, CMS = 1. From their models, we ﬁnd that the      dn• =    Gpc−3      105      < 108         .        (18)                                                   M⊙< M•    M⊙relaxation time at 0.01pc in the Galactic centre is 0.78Gyr, leading     dM•   M•
+to a calibration factor of Crelax = 0.02.                           The upper boundary comes from a sharp drop in the observed MBH
+   We also consider a model suggested1 by O’Leary et al. (2008).     number density around M• ≈108 M⊙. Due to a lack of information
+In this model, the density of the BHs at the radius of inﬂuence     on MBHs of M• < 106 M⊙, the lower boundary is arbitrarily cho-
+is higher by a factor 10 at rh compared to the main model, and      sen to be 105 M⊙. Although at frequencies between 10−3 and 10−2the masses of the BHs are higher. Such models may be rele-      Hz, MBHs of the lowest masses contribute most to the EMBB, de-
+vant for Galactic nuclei because of empirical hints that the ini-      creasing the lower bound only mildly affects the EMBB. The en-
+tial mass function is much ﬂatter than usual the Galactic centre      ergy density of GW bursts emitted by stars of species M is
+(see e.g. Nayakshin & Sunyaev 2005; Maness et al. 2007). We note
+                                                             d2ΓMthat there are no dynamical constraints on the amount or mass of        ˙E (f ) =        ∆EGW δ(f        dn•     dωp da.    (19)                                                                                  dM•                                                                 da dωp        −2ωp)BHs in the Galactic centre (e.g. Mouawad et al. 2005; Ghez et al.            VZ                                                                              dM•
+2008). Since in systems with many, more massive BHs mass segre-
+gation is less pronounced, the scaling for the density proﬁle is not
+straightforward; for example, the number of BHs enclosed within      3.3  Observed gravitational wave energy density
+0.01pc is only a factor ∼2 higher than in our main model. Us-     The GW spectrum observed by LISA is the accumulation of theing the relaxation times given in O’Leary et al. (2008), we ﬁnd
+                                   GW radiation of all galaxies in the universe. The emitted spectrum                              = 2; andthat for this model MBH = 18M⊙; CM = 1.6×10−2; αBH                                                                                        ˙E (fem)d fem is the rate per unit proper time and per unit co-moving
+Crelax = 3×10−3.                                             volume at which GW energy in the frequency range (fem, fem +   When using these models, we exclude certain orbits due to
+                                                           d fem) are emitted. The total GW energy density (dρ/d f )d f todaythe four processes described in the previous section. Stars are only
+                                                                  with frequencies f = fem/(1+z) in the range (f, f +d f ) is thencontributing GWs if the inequalities (12), (13), (14) and (16) are
+satisﬁed. As an illustration we show the orbit space around a MBH
+of  = 106        a BH of M⋆= 10       ﬁgure (1a) and for a    dρ                     dt ˙E (fem)  M•     M⊙for            M⊙in                         d f  =  d fem   dzMS of M⋆= 1 M⊙in ﬁgure (1b). The boundaries of the populated      d f             Z   dz 1+z
+parts of the orbit space of compact objects are caused by two pro-                             dt                                                                                                                      ˙E [ f (1+z)].                         (20)cesses; the inspiral process and the loss-cone. The cut-offs through        =  d f   dz                                                                                  dz                                                                        Zthe orbit space of MSs are caused by all four processes of §2.2. We
+                                                                For 0 < z < 2, we follow Barack & Cutler (2004) in approximat-note that the processes that limit the GW burst rate depend on the
+                                                                     ing t     (1+z)−1.18, where a spatially ﬂat Friedmann-Lemaître-MBH mass.                                                ≈t0                                                                 Robertson-Walker Universe is assumed with ΩΛ = 0.70 and ΩM =
+                                                                  0.30 and the Universe’s current age is t0 = 0.964H−10 = 1.39                                                                       ×
+                                                              1010h−170  yr. For sources in the range 0 < z < 2, this is accurate
+3  GRAVITATIONAL WAVE BACKGROUND                       to within ∼3 per cent. The approximation is justiﬁed since the                                         EMBB is dominated by the nearby universe and contributions from
+3.1  Gravitational wave energy in a single burst                                                           1 < z < 2 accounts for just 5-8 per cent of that of 0 < z < 2.
+For an eccentric Newtonian orbit, the amount of energy emitted in
+GWs in one period ∆EGW [see Eq. (7)] and the distribution of this
+energy over frequencies dQ/d f  is studied by Peters & Mathews      3.4  Gravitational wave background for LISA
+(1963). The emitted power peaks at a frequency  f that is twice                                                         The energy density of an isotropic background of individually un-
+the circular frequency at periapse ωp. To simplify our analysis we                                                                        resolvable GW sources is related to the spectral density in the LISA
+assume that all energy ∆EGW is emitted at f = 2ωp, therefore                                                                         detector by SGW(f ) = 4G/(πc2 f 2) dρM/d f  (Barack & Cutler
+dQ                                                                 2004), or
+  = ∆EGW δ(f −2ωp).                                   (17) d f
+                                                                                                                  dt                                                         4G                                                                                        d2ΓMIn    reality,           the             spectrum                             is quite                                broad,                                      but                                            the                                              exact                                                shape                                                           of the                                                                                                  dn•                                                       SGW(f ) =                                                                                   dz dM• dωp da dz                                                                                             da                                                                                                                                f 2                                                                   πc2                                                                                          dωpspectrum            is            not                important,                           since                       we sum                                      over                                          a                                            very large                                               number                                                                            VZ                                                                                 dM•
+of bursts.
+                                                    × ∆EGW δ[ f (1+z)−2ωp]        (21)
+                                                            where equations (19) and (20) were used. The integral is taken over
+3.2  Gravitational wave energy density                    V representing that part of orbit space that is populated according
+                                                                           to §2.2.
+We next integrate this spectrum over M• with the space numberdensity of MBHs of Allen & Richstone (2002), which we assume
+
+                                                           4  RESULTS
+1 O’Leary et al. (2008) consider a wide range of models, including models
+with steeper mass functions. We will refer to the model considered here as      For our main model, the resulting EMBB (f SGW)1/2 of the four
+the “O’Leary et al. (2008) model” for brevity. O’Leary et al. (2008) assume      species of stars is shown in ﬁgure (2). The EMBB is dominated by
+a range of BH masses, which we collect here into a single averaged BH       contributions from BHs. This is mainly due to two reasons. First, a
+mass.                                                                     single burst emitted by a BH is more energetic than a burst emitted
+
+                                                                 Gravitational wave background   5
+
+
+
+
+
+                                              (a)                                                                 (b)
+Figure 1. Boundaries in orbit space around a MBH of M• = 106M⊙for a BH of M⋆= 10M⊙in Fig. 1a and of a MS of M⋆= 1M⊙in Fig. 1b. Stellar orbitsare populated in the shaded area only. The ﬁgures are representative of all relevant stars and MBHs where the cuts scale according to Eq. (12), (13), (14) and
+(16). The red line indicates the boundary in orbit space resulting from the condition rp ⩽a. The result is not very sensitive to the inner cutoff; imposing a hard
+cutoff at 10−4 pc in ﬁgure (a) decreases ( fSGW)1/2 by ∼50 per cent.
+
+
+                                                            The EMRI background is caused by BHs that spiral in to the
+                                              MBH. These sources are excluded in our calculations by eliminat-
+                                                                     ing inspiral orbits, see §2.2.1. The expression for the EMRI back-
+                                                               ground was taken from Barack & Cutler (2004) and scales with the
+                                                                              inspiral rate. From Hopman & Alexander (2006b) we take an inspi-
+                                                                                   ral rate of 1×10−7 yr−1 leading to a EMRI background at a level                                                               comparable to the instrumental noise of LISA.
+                                                                           In our favoured model the EMBB is well below the instrumen-
+                                                                                        tal noise of LISA. At closest approach the EMBB (f SGW)1/2 is a
+                                                                            factor ∼10 below the instrumental noise of LISA, and a factor ∼                                                           19 lower than the confusion noise of Galactic WD binaries. The
+                                         EMBB is also lower than the EMRI background in the interesting
+                                                                   frequency range where the noise from EMRIs is stronger than that
+                                                                       of the instrument itself.
+                                                            The O’Leary et al. (2008) model is also displayed in ﬁgure (2).
+                                                                      In this model there are more, and more massive BHs, which raises
+                                                                        the EMBB due to an increase in the number of BH bursts and an
+                                                                        increase in the relaxation rate protecting stars from inspiral. Fig-
+                                                                     ure (2) shows the EMBB is raised by a factor ∼6 on average with                                                                         respect to our main model. However, even with this stellar distribu-
+                                                                           tion the EMBB is smaller than the instrumental noise of LISA by a
+Figure 2. Comparison between the EMBB, instrumental noise of LISA                                                                            factor ∼1.5, and a factor ∼3 including the noise of galactic WD bi-(Larson 2001), the galactic WD binary background (Larson 2001) and the       naries. Overall the sensitivity of the EMBB on the individual model
+BH EMRI (inspiral) background (Barack & Cutler 2004) with an inspi-      parameters is not strong enough to raise the EMBB above the in-
+ral rate of 10−7yr−1. The EMBB is smaller than the other types of GW      strumental noise of LISA, without increasing MBH by a factor 10
+noise. The EMBB due to only BHs, WDs, NSs or MSs is shown in sym-      and other parameters by even more.
+bols and contributions from BHs dominate the spectrum. The EMBB of the
+O’Leary et al. (2008) model is also shown. Even though it is signiﬁcantly
+higher than the EMBB in our preferred model, it is still lower than the in-
+strumental noise of LISA.                                        5 SUMMARY AND DISCUSSION
+                                                                         Stars whose orbits carry them near the Schwarzschild radius of a
+by the other species of stars in a similar orbit. Second, the BH dis-    MBH emit gravitational waves in the LISA frequency band. If the
+tribution is steeper due to mass-segregation which leads to a higher       orbit of the star is very eccentric, the star emits bursts of GWs each
+burst rate, see Eq. (7). Note that the EMBB due to MSs is cut off       peri-centre passage without necessarily spiraling in. Most extra-
+at ∼10−3 Hz, because tidal effects prohibit the existence of non-       galactic bursts are not individually resolvable and hence will con-compact objects at small distances from the MBH.                          stitute a gravitational wave background.
+
+6   Toonen, Hopman and Freitag
+
+    For our favoured model the EMBB is dominated by GW     The form  of  this  coefﬁcient  is such  that  it reproduces  the
+bursts from BHs, and is a factor ∼10 lower than the instrumental      Bahcall & Wolf (1976) solution with distribution function  f (x) ∝noise of LISA. Including the WD Galactic background increases       x1/4; the prefactor is for consistency with Hopman (2009). (Here
+the insigniﬁcance of the EMBB to a factor ∼19. Even for the       positive energy implies that the star is bound to the MBH).O’Leary et al. (2008) model, which has a much ﬂatter mass func-          Angular momentum diffusion — Let the angular momentum j
+tion, the EMBB is smaller than the instrumental noise of LISA by      be scaled by the circular angular momentum, such that by deﬁnition
+a factor ∼1.5 (or a factor ∼3 including the WD Galactic back-     0 <  j < 1. Let  j perform a random walk such that the diffusionground). The EMBB is also well below the EMRI background      coefﬁcient is (see Hopman (2009) for the prefactor)
+(Barack & Cutler 2004). We conclude that the detection of GWs
+by LISA will not be hindered by a background of bursting sources.
+                                                       D j j = 6.6x1/4.                  (A2)    As an additional application of our model, we revisit the possi-
+bility of direct detection of GW bursts in the Galactic centre, due to          Boundary conditions — Let the actual angular momentum of
+stars on relativistic orbits. Yunes et al. (2008) have investigated the       the loss-cone be independent of energy, such that if it is scaled by
+impact of including relativistic corrections to the description of the       the circular angular momentum, it becomes
+star’s trajectory. The degree to which the relativistic corrections are
+important depends on the star’s orbit and is largest for small peri-                                                                                                                     1/2
+centre distances. Yunes et al. (2008) ﬁnd that orbits with peri-centre                                      x                                                                                                           jlc(x) =                   ,               (A3)
+velocities |vp| > 0.25c account for approximately half of the events                                    xmaxwithin the orbit space considered by Rubbo et al. (2006) around                                                                  with xmax some maximal energy.a MBH of 3.7  106     However, Rubbo et al. (2006) incorpo-        ×   M⊙.                                            Energy loss by GWs — Let the loss of energy per unit time berate tight, possibly relativistic orbits that are unpopulated accord-
+ing to our assumptions of the boundaries in orbitspace of §2.2 (see
+also the appendix). Assuming our main model of a galactic nu-                                                             j    −7                                                                                     ˙xGW = x3/2           τ−1,            (A4)cleus, a similar MBH mass as Rubbo et al. (2006) and integrating                                            jlc(x)
+over all frequencies that can be detected by LISA (See Eq. (4) in                                                            which has a scaling such as that in GW emission, and the constant
+Hopman et al. (2007) with a signal to noise of 5), relativistic orbits                                             τ is chosen here to be τ = 10−6.
+account for ∼1 per cent of all events within the orbit space con-          This leads to the following dynamical equationssidered by our main model. We conclude that LISA is unlikely to
+detect relativistic bursts from the Galactic centre.
+                                                                                                                                                                                                                  j jδt;               (A5)                                                                                                         jt+δt = jt +r q D
+ACKNOWLEDGEMENTS
+                                                                                           xt+δt = xt +r  Dxxδt + ˙xGWδt,          (A6)CH is supported by a Veni scholarship from the Netherlands Or-ganisation for Scientiﬁc Research (NWO).                         where in these equations r is a normallyp      distributed random variable
+                                                                  with mean zero and unit variance. The three terms in the dynamical
+                                                                     equations give rise to three time-scales: the time scale for changes
+APPENDIX A: DEPLETION OF PHASE SPACE DUE TO          in j of order of itself due to scattering
+GRAVITATIONAL WAVE INSPIRAL
+Throughout this paper, we have not considered the contribution of                                   t j = D−1j j j2 = (1/6.6)x−1/4 j2;           (A7)
+stars in the region where tJ > ti (see §2.2.1). Stars in this region do                                                                        the time scale for changes in x of order of itself due to scatteringcontribute to the EMBB: these stars spiral in and become eventually
+directly resolvable EMRIs. Before they can be resolved, however,                                 tx = D−1xx x2 = (1/85)x−1/4;             (A8)
+they contribute to a stochastic background. This contribution to the
+EMBB was studied by Barack & Cutler (2004), and we ﬁnd that it      and the time for changes in x of order of itself due to GW emission
+is dominant over the contribution of ﬂy-bys (see ﬁgure 1).                                      x                                                                                                                                                       ti =   = x−4 j7x7/2maxτ.              (A9)   We stress that our analysis as presented in this paper does                              ˙xGW
+not apply to the region tJ > ti, because orbits in this region are                                                We simulate the dynamical process described above with andless likely to be populated. In this appendix we analyse a toy                                                                   without GW emission by means of a MC simulation with aboutmodel of Monte Carlo (MC) simulations based on the method by                                                                106 particles. We follow the Shapiro & Marchant (1978) cloningShapiro & Marchant (1978) to show this. For details on the method,
+                                                           scheme in order to resolve the distribution function over severalwe refer to Shapiro & Marchant (1978) and Hopman (2009). The                                                                       orders of magnitude. We deﬁne the distribution f (x, j2) asmodel does not include mass-segregation, and is not intended to
+faithfully represent a galactic nucleus, but is instead used to high-
+light the difference in the dynamics in the two regimes delineated                                    d2N(x, j2)                                                                                                                                      f (x, j2)                            ,           (A10)by t j = ti.                                                                  ≡x5/4j2 d lnxd ln j2
+    Consider the following simple dynamical model:
+                                                            where N is the normalised number of particles and the prefactor    Energy diffusion — Let the (scaled) energy x perform a ran-                                                                    x5/4/j2 was added in order to divide out the dependence on energydom walk such that the diffusion coefﬁcient is
+                                                             and angular momentum if the distribution is isotropic and there are
+                                                           no GWs. We show the resulting normalised steady state distribution
+                      Dxx = 85x9/4.                  (A1)       in ﬁgure (A1) for the case without GW emission and ﬁgure (A2)
+
+                                                                 Gravitational wave background   7
+
+                                                                   Gair J. R., Barack L., Creighton T., Cutler C., Larson S. L., Phin-
+                                                                ney E. S., Vallisneri M., 2004, Clas. Quantum Gravity, 21, 1595
+         1                                                   0.18          Gair J. R., 2008, ArXiv e-prints (arXiv: 0811.0188)
+                                                              0.16         Ghez A. M., et al., 2008, IAU symposium, 248, 52
+                                                              0.14         Glampedakis K., 2005, Clas. Quantum Gravity, 22, 605
+         0.1                                                   0.12           Hils D., Bender P. L., 1995, ApJ, 445, L7
+                                                                 0.1         Hopman C., Alexander T., 2005, ApJ, 629, 362j2
+                                                              0.08        Hopman C., Alexander T., 2006a, ApJ, 645, 1152
+       0.01                                                   0.06        Hopman C., Alexander T., 2006b, ApJ, 645, L133
+                                                              0.04        Hopman C., 2006, astro-ph/0608460
+                                                              0.02        Hopman C., 2009, ArXiv e-prints, arXiv:0906.0374
+      0.001                                             0                                                    Hopman C., Freitag M., Larson S. L., 2007, MNRAS, 378, 129
+           1        10       100      1000     10000                                                                  Ivanov P. B., 2002, MNRAS, 336, 373
+                              x                                                                      Keshet, U., Hopman, C., Alexander, T. 2009, ArXiv e-prints,
+                                                                    arXiv:0901.4343
+Figure A1. Distribution f(x, j2) of stars without GW emission (arbitrary       Larson    S.    L.,   Online    Sensitivity   Curve   Gener-
+scale). The red solid line denotes the loss-cone, the blue dotted line delin-           ator,   2001,   based   on   Larson,   S.    L.,   Hellings,
+eates tj = ti, and the green dashed line delineates tx = ti.                       R.  W. &  Hiscock,  W.  A.,  2002,  Phys.;  located   at
+                                                  http://www.srl.caltech.edu/∼shane/sensitivity/                                                                     Rev. D, 66, 062001.
+                                                             Lightman A. P., Shapiro S. L., 1977, ApJ, 211, 244
+                                                           Maness Hl, et al., 2007, 669, 1024         1                                                      0.2
+                                                              0.18           Merritt D., Ferrarese L., 2001, MNRAS, 320, L30
+                                                              0.16        Mouawad N., Eckart A., Pfalzner S., Schödel R., Moultaka J.,
+                                                              0.14          Spurzem R., 2005, Astron. Nachr., 326, 83         0.1
+                                                              0.12          Nayakshin S., Sunyaev R., 2005, MNRAS, 364, L23
+j2                                                             0.1          O’Leary R. M., Kocsis B., Loeb A., 2008, ArXiv e-prints, 807
+                                                              0.08       0.01                                                           Peebles P. J. E., 1972, ApJ, 178, 371                                                              0.06
+                                                                         Peters P. C., Mathews J., 1963, Phys. Rev., 131, 435                                                              0.04
+                                                              0.02          Quinlan G. D., Hernquist L., Sigurdsson S., 1995, ApJ, 440, 554
+      0.001                                             0           Rauch K. P., Tremaine S., 1996, New Astron., 1, 149
+           1        10       100      1000     10000             Rauch K. P., Ingalls B., 1998, MNRAS, 299, 1231
+                              x                               Rubbo L. J., Holley-Bockelmann K., Finn L. S., 2006, ApJ, 649,
+                                                         L25
+Figure A2. Same as previous ﬁgure, but now with energy losses to GWs.        Shapiro, S. L., & Marchant, A. B. 1978, ApJ, 225, 603
+Comparison of the two ﬁgures shows that the distribution  is depleted       Sigurdsson S., Rees M. J., 1997, MNRAS, 284, 318
+in presence of GW emission, approximately in the region where  ti <        Spitzer L. J., Saslaw W. C., 1966, ApJ, 143, 400
+min(tj,tx) ∼tj. Note that some stars do remain within the ti < min(tj,tx)        Spitzer, L. 1987, Dynamical evolution of globular clusters, ed.
+region; these are inspiraling stars, and their contribution to the EMBB was         L. Spitzer
+accounted for by Barack & Cutler (2004).                                Tremaine S., et al., 2002, ApJ, 574, 704
+                                                         Young P., 1980, ApJ, 242, 1232
+                                                             Yunes N., Sopuerta C. F., Rubbo L. J., Holley-Bockelmann K.,for the case with GW emission. The ﬁgures clearly shows that the
+                                                                    2008, ApJ, 675, 604region where ti < t j is depleted if there are energy losses to GWs.
+
+
+REFERENCES
+ Alexander T., Hopman C., 2003, ApJ, 590, L29
+ Alexander T., Hopman C., 2009, ArXiv e-prints, 697, 1861
+ Allen M. C., Richstone D., 2002, AJ, 124, 3035
+ Amaro-Seoane, P., Gair, J. R., Freitag, M., Miller, M. C., Mandel,
+    I., Cutler, C. J., Babak, S., 2007, Clas. Quantum Gravity, 24, 113
+ Bahcall J. N., Wolf R. A., 1976, ApJ, 209, 214
+ Bahcall J. N., Wolf R. A., 1977, ApJ, 216, 883
+ Barack L., Cutler C., 2004, Phys. Rev. D, 70, 122002
+  Cohn H., Kulsrud R. M., 1978, ApJ, 226, 1087
+ Finn L. S., Thorne K. S., 2000, Phys. Rev. D, 62, 124021
+  Frank J., Rees M. J., 1976, MNRAS, 176, 633
+ Freitag M., 2001, Clas. Quantum Gravity, 18, 4033
+ Freitag M., 2003, ApJ, 583, L21
+ Freitag M., Benz W., 2005, MNRAS, pp 245
+ Freitag M., Amaro-Seoane P., Kalogera V., 2006, ApJ, 649, 91

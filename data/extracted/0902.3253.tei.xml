@@ -1,0 +1,1076 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">The gravitational wave background from star-massive black hole fly-bys</title>
+				<funder ref="#_e5UPPaQ">
+					<orgName type="full">Netherlands Organisation for Scientific Research (NWO)</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2018-10-28">28 October 2018</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Silvia</forename><surname>Toonen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Leiden Observatory</orgName>
+								<orgName type="institution" key="instit2">Leiden University</orgName>
+								<address>
+									<postBox>P.O. Box 9513</postBox>
+									<postCode>2300 RA</postCode>
+									<settlement>Leiden</settlement>
+									<country key="NL">The Netherlands</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Astrophysics</orgName>
+								<orgName type="institution" key="instit1">IMAPP</orgName>
+								<orgName type="institution" key="instit2">Radboud University</orgName>
+								<address>
+									<postBox>P.O. Box 9010</postBox>
+									<postCode>6500 GL</postCode>
+									<settlement>Nijmegen Nijmegen</settlement>
+									<country key="NL">The Netherlands</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Clovis</forename><surname>Hopman</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Leiden Observatory</orgName>
+								<orgName type="institution" key="instit2">Leiden University</orgName>
+								<address>
+									<postBox>P.O. Box 9513</postBox>
+									<postCode>2300 RA</postCode>
+									<settlement>Leiden</settlement>
+									<country key="NL">The Netherlands</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Marc</forename><surname>Freitag</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Institute of Astronomy</orgName>
+								<orgName type="institution">University of Cambridge</orgName>
+								<address>
+									<addrLine>Madingley Road</addrLine>
+									<postCode>CB3 0HA</postCode>
+									<settlement>Cambridge</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">The gravitational wave background from star-massive black hole fly-bys</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2018-10-28">28 October 2018</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">4CB89F387CAAF3A170B1C1B89EF03CD7</idno>
+					<idno type="arXiv">arXiv:0902.3253v2[astro-ph.EP]</idno>
+					<note type="submission">Accepted 2009 May 28. Received 2009 February 17</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-10-16T00:48+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>black hole physics -stellar dynamics -gravitational waves -Galaxy: centre</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Stars on eccentric orbits around a massive black hole (MBH) emit bursts of gravitational waves (GWs) at periapse. Such events may be directly resolvable in the Galactic centre. However, if the star does not spiral in, the emitted GWs are not resolvable for extra-galactic MBHs, but constitute a source of background noise. We estimate the power spectrum of this extreme mass ratio burst background (EMBB) and compare it to the anticipated instrumental noise of the Laser Interferometer Space Antenna (LISA). To this end, we model the regions close to a MBH, accounting for mass-segregation, and for processes that limit the presence of stars close to the MBH, such as GW inspiral and hydrodynamical collisions between stars. We find that the EMBB is dominated by GW bursts from stellar mass black holes, and the magnitude of the noise spectrum ( f S GW ) 1/2 is at least a factor ∼ 10 smaller than the instrumental noise. As an additional result of our analysis, we show that LISA is unlikely to detect relativistic bursts in the Galactic centre.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1">INTRODUCTION</head><p>A new opportunity to study stellar processes near massive black holes (MBHs) arises with the anticipated detection of gravitational waves (GWs) by the Laser Interferometer Space Antenna (LISA). LISA will be a space-based detector in orbit around the Sun, consisting of three satellites five million kilometres apart. It will be sensitive to GWs in a frequency range 10 -4 Hz f 10 -2 Hz. An important source of GWs for LISA is the inspiral of compact objects onto MBHs in galactic nuclei (e.g. <ref type="bibr" target="#b18">Hils &amp; Bender 1995;</ref><ref type="bibr" target="#b40">Sigurdsson &amp; Rees 1997;</ref><ref type="bibr" target="#b25">Ivanov 2002;</ref><ref type="bibr" target="#b11">Freitag 2003;</ref><ref type="bibr" target="#b19">Hopman &amp; Alexander 2005</ref><ref type="bibr" target="#b20">, 2006a</ref><ref type="bibr" target="#b21">, 2006b;</ref><ref type="bibr" target="#b3">Amaro-Seoane et al. 2007</ref>; see Hopman 2006 for a review). These are sources on highly eccentric orbits with periapses slightly larger than the Schwarzschild radius r S = 2GM • /c 2 of the MBH, where M • is the mass of the MBH. The star dissipates energy due to GW emission, and as a result spirals in. Such extreme mass ratio inspirals (EMRIs) can be observed by LISA to cosmological distances if the orbital period of the star is shorter than P 10 4 sec <ref type="bibr" target="#b8">(Finn &amp; Thorne 2000;</ref><ref type="bibr">Barack &amp; Cutler 2004;</ref><ref type="bibr" target="#b14">Gair et al. 2004;</ref><ref type="bibr" target="#b17">Glampedakis 2005</ref>). LISA will detect hundreds to thousands of such captures over its projected 3-5 yr mission life time <ref type="bibr" target="#b14">(Gair et al. 2004;</ref><ref type="bibr" target="#b15">Gair 2008)</ref>.</p><p>For most of the inspiral the emitted GWs are not observable by LISA. These GWs give rise to a source of confusion noise, possibly ⋆ e-mail: s.toonen@astro.ru.nl obscuring other types of GW sources. The shape and overall magnitude of this EMRI background has been studied by <ref type="bibr">Barack &amp; Cutler (2004)</ref>. They do not study the dynamical requirements of inspiral, but scale their result with possible EMRI rates of <ref type="bibr" target="#b10">Freitag (2001</ref><ref type="bibr" target="#b11">Freitag ( , 2003))</ref>. Therefore noise of stars that do not eventually spiral in is not included. <ref type="bibr" target="#b39">Rubbo et al. (2006)</ref> show that stars on long periods of a few years and nearly radial orbits that carry them near the Schwarzschild radius of the MBH, emit bursts of GWs that for the Galactic centre will give a signal to noise ratio larger than 5. Taking into account processes determining the inner radius of the density profile as well as mass segregation effects, <ref type="bibr" target="#b24">Hopman et al. (2007)</ref> find that stellar mass black holes (BHs) have a burst rate of order 1 yr -1 , while the rate is 0.1 yr -1 for main sequence stars (MSs) and white dwarfs (WDs).</p><p>Individual bursts from star-MBH fly-bys may be detected from our own Galactic centre, but it is unlikely they will be observed from other galactic nuclei. However, the accumulation of all bursts of all galaxies in the universe gives rise to an extreme mass ratio burst background (EMBB). Since the energy emitted per event is much higher for inspirals compared to fly-bys, but the event rate is much lower <ref type="bibr" target="#b0">(Alexander &amp; Hopman 2003)</ref>, it is not a priori clear which of these dominates the confuse background. In this paper we study the contribution of these fly-bys to the GW background. In §2 we derive an analytical expression for the event rate of GW bursts in a galactic nucleus. This model diverges at several boundaries, and we consider in §2.2 what the physical processes are that de-termine the range within which our model is valid. Our formalism is similar to that of the galactic burst rate of <ref type="bibr" target="#b24">Hopman et al. (2007)</ref>. We derive an expression for the emitted energy spectrum of GW bursts in a single galactic nucleus in §3. A relation for the EMBB from the accumulation of GW bursts from all redshifts observed by LISA is derived in §3.3. In §4 we compare the resulting EMBB to the instrumental noise of LISA <ref type="bibr" target="#b27">(Larson 2001)</ref>, and to other astrophysical backgrounds. We conclude in §5 and discuss what our model implies for the possibility of directly detecting relativistic bursts of GWs from our Galactic centre.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2">THE GRAVITATIONAL WAVE BURST RATE AND SPECTRUM FROM A SINGLE GALACTIC NUCLEUS</head><p>In this section, we present a simple model for a galactic nucleus and derive the burst rate for that model. We discard parts of phasespace in our model where stars are unlikely to exist due to various processes.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1">The gravitational wave burst rate</head><p>A MBH dominates the potential inside the radius of influence</p><formula xml:id="formula_0">r h = GM • σ 2 ,<label>(1)</label></formula><p>where σ denotes the stellar velocity dispersion far away from the MBH. The MBH mass is empirically related to the velocity dispersion of the bulge by</p><formula xml:id="formula_1">M • = 10 8 M ⊙ σ 200 km s -1</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>4</head><p>(2) (e.g. <ref type="bibr" target="#b30">Merritt &amp; Ferrarese 2001;</ref><ref type="bibr" target="#b43">Tremaine et al. 2002)</ref>. Inside the radius of influence, stellar orbits are assumed to be Keplerian. Galactic nuclei with M • 10 7 M ⊙ have relaxation times less than a Hubble time and are dynamically relaxed, while for very massive MBHs, the distribution will depend on the initial conditions. However even in this case the inner region of the cusp may be of power-law form due to the effect caused by a slow growth of a black hole inside a stellar system (see e.g. <ref type="bibr" target="#b44">Young 1980;</ref><ref type="bibr" target="#b36">Quinlan et al. 1995)</ref>. We will for simplicity assume that our models also apply for M • &gt; 10 7 M ⊙ . The contribution of such MBHs is only marginal for the EMBB, and this assumption does not affect our result.</p><p>We assume the distribution within r h to be spherically symmetric in space and approximately isotropic in velocity space. The radial density profile is approximated by a power law, ν ∝ r -α M (e.g. <ref type="bibr" target="#b34">Peebles 1972;</ref><ref type="bibr" target="#b4">Bahcall &amp; Wolf 1976)</ref>, where the slope α M depends on the stellar mass M ⋆ ; due to mass segregation <ref type="bibr" target="#b42">Spitzer (1987)</ref>, larger masses have larger α M . The number of stars n M (a, J 2 ) da dJ 2 of type M in an element (a, a + da), (J 2 , J 2 + dJ 2 ) is then given by</p><formula xml:id="formula_2">n M (a, J 2 ) da dJ 2 = (3 -α M ) C M N h r h a r h 2-α M 1 J 2 c (a) da dJ 2 , (<label>3</label></formula><formula xml:id="formula_3">)</formula><p>where we assume N h = M • /M ⊙ . The total number of stars of type M within r h is defined as C M N h . We calibrate the parameters C M using solutions to Fokker-Planck equations applied to the Galactic centre <ref type="bibr">(Alexander &amp; Hopman 2009)</ref>, such that the number of stars within 0.01 pc agrees with those simulations. Since the density distribution of a species M is not a strict power law in the Fokker-Planck models, this implies that our density profile is a good approximation only at small radii. Since the burst rate is dominated at those small radii (see equation <ref type="bibr">[7]</ref>), the small mismatch at larger radii will not strongly affect our conclusions.</p><p>A useful parametrisation of an orbit is the frequency a star would have on a circular orbit with radius of its periapse r p ,</p><formula xml:id="formula_4">ω p ≡ GM • r 3 p . (<label>4</label></formula><formula xml:id="formula_5">)</formula><p>Note that for eccentric orbits ω p ≫ 1/P where P(a) = 2π(a 3 /GM • ) 1/2 is the orbital period. The number of stars n(a, ω p ) da dω p in an element (a, a + da), (ω p , ω p + dω p ) is then</p><formula xml:id="formula_6">n M (a, ω p ) = (3 -α M ) 4C M N h 3r 2 h (GM • ) 1/3 a r h 1-α M ω -5/3 p ,<label>(5)</label></formula><p>where it was assumed that e ≈ 1.</p><p>A star on a highly eccentric orbit emits almost all of its GW energy at periapse in a single GW burst. The burst rate per logarithmic unit of the semi-major axis and frequency at which stars of species M have a bursting interaction with the MBH is given by</p><formula xml:id="formula_7">d 2 Γ M d ln a d ln ω p = 1 P(a) (3 -α M ) 4C M N h 3r h (GM • ) 1/3 a r h 2-α M ω -2/3 p (6) = 5.7 × 10 -7 yr -1 (3 -α M ) C M M α M /2+1/3 ã 1/2-α M ωp -2/3 ,</formula><p>where we convert to dimensionless units defined as M</p><formula xml:id="formula_8">• = M • /M • ; ã = a/r h,• ; ωp = ω p /ω • , and M • = 10 6 M ⊙ ; r h,0 = GM • /σ 2 • ≈ 1 pc; ω • = c 3 /(GM • ) ≈ 0.2 Hz.</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2">The inner region of the stellar cusp</head><p>Since we describe the profile of the galactic nucleus by power laws, integration over orbital space leads to formal divergences, and it is therefore important to determine the boundaries of validity of our model. In the next section we consider a number of processes that can determine the inner edge of the stellar cusp. The burst rate is approximately proportional to dΓ M /d ln a ∝ a 1/2-α M (see equation <ref type="bibr">[7]</ref>). As typical values for α are in the range 1.4 -2 (see e.g. <ref type="bibr" target="#b20">Hopman &amp; Alexander 2006a;</ref><ref type="bibr" target="#b13">Freitag et al. 2006;</ref><ref type="bibr">Alexander &amp; Hopman 2009)</ref>, the GW energy spectrum is dominated by GW bursts from stellar orbits at small radii and therefore we focus on the stellar dynamics in the vicinity of a MBH.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.1">Gravitational wave inspiral</head><p>As a star loses energy repeatedly with every periapse passage due to GW emission, it spirals in. Unresolvable EMRIs constitute a background noise for LISA studied by <ref type="bibr">Barack &amp; Cutler (2004)</ref>. Our study instead focuses on the subset of extreme mass ratio events that do not spiral in, and GW emission from EMRIs must be excluded. We note that the dynamics of the progenitors of EMRI noise and burst noise is very different. The part of phase space where stars spiral in is at any particular time typically not populated, so that, e.g., equation ( <ref type="formula" target="#formula_9">7</ref>) does not apply.</p><p>The amount of energy ∆E GW that is lost in one period is given by <ref type="bibr" target="#b35">Peters &amp; Mathews (1963)</ref> as</p><formula xml:id="formula_9">∆E GW = 8π 5 √ 2 f (e) M ⋆ M • M ⋆ c 2 r p r s -7/2 = 2.8 × 10 49 erg M2 ⋆ M4/3 • ω7/3 p ,<label>(7)</label></formula><p>where for highly eccentric orbits f (e) ≈ 0.39. We define the characteristic time for inspiral t i as the time it takes the initial orbital energy ε 0 to grow formally to infinity,</p><formula xml:id="formula_10">t i = ∞ ε 0 dε dε/dt ≈ ∞ ε 0 dε ∆E GW /P(a) ≈ 2.9 × 10 2 yr M-1 ⋆ M-5/6 • ã1/2 ω-7/3 p . (<label>8</label></formula><formula xml:id="formula_11">)</formula><p>While the orbit decays, two body scattering by other stars perturbs it, changing the orbital angular momentum by order of itself in a timescale t J . The magnitude and direction of the step in angular momentum is a random walk process, and typically in a relaxation time the step is of the size of the circular angular momentum J c = (GM • a) 1/2 , and hence</p><formula xml:id="formula_12">t J = J J c 2 t relax .<label>(9)</label></formula><p>In this expression t relax is the relaxation time,</p><formula xml:id="formula_13">t relax = C relax σ 3 G 2 M 2 ⊙ n h a r h 1/2 , (<label>10</label></formula><formula xml:id="formula_14">)</formula><p>where C relax is a numerical constant that also absorbs the Coulomb logarithm, σ is the velocity dispersion far away from the MBH, and</p><formula xml:id="formula_15">n h ∝ M -1/2 •</formula><p>is the density of stars at the radius of influence. Due to strong mass-segregation <ref type="bibr">(Alexander &amp; Hopman 2009;</ref><ref type="bibr" target="#b26">Keshet et al. 2009)</ref>, at small radii the relaxation time is dominated by BH interactions, while at large distances the MSs dominate the relaxation rate. The true relaxation time is a combination of the BH and MS relaxation time, and in order to keep the calculation more tractable, we approximate it by a power law. As the burst rate is critically sensitive to the inner cut-off of the density profile, we chose the constant C relax to calibrate the relaxation time at a small radius of 0.01 pc for the model in <ref type="bibr">Alexander &amp; Hopman (2009)</ref>. For those values, we find C relax = 0.02.</p><p>With this scaling the relaxation time and scatter time become</p><formula xml:id="formula_16">t relax = 2.7 Gyr C relax 0.02 M• ã1/2 ; t J = 240 yr C relax 0.02 M4/3 • ã-1/2 ω-2/3 p . (<label>11</label></formula><formula xml:id="formula_17">)</formula><p>If t J &gt; t i , stars spiral in faster than they are replenished by other stars. In the corresponding region of orbit space, any bursting star is quickly accreted, so this region is typically empty (see the appendix for further details). The fact that this part of phase-space is not populated has also consequences for the possibility of detecting relativistic bursts in the Galactic centre; see §5 for further details. Solving t J = t i for ω p gives an inner cut-off of ωp &lt; ωi ≡ 1.1 ( C relax 0.02</p><formula xml:id="formula_18">) -3/5 M⋆ -3/5 M• -13/10 ã3/5 . (<label>12</label></formula><formula xml:id="formula_19">)</formula><p>We assume that stars with ωp &gt; ωi always spiral in and we neglect these stars (noise for these stars was accounted for by <ref type="bibr">Barack &amp; Cutler 2004</ref>), while stars with ωp &lt; ωi never spiral in, and we take these stars into account as bursting sources.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.2">The direct capture loss-cone</head><p>All stars with an angular momentum less than the last stable orbit J LSO = 4GM • /c (the "loss-cone") are pulled into the MBH. Since a star in this region of orbit space is removed in a dynamical time, we do not consider stars in this region. Therefore stars only contribute GWs to the EMBB if ωp &lt; ωlc ≡ 4.41 × 10 -2 M-1</p><p>• .</p><p>In reality the empty region inside the loss-cone will also affect the regions nearby in angular momentum space <ref type="bibr" target="#b28">(Lightman &amp; Shapiro 1977)</ref>, although this is partially erased by resonant relaxation <ref type="bibr" target="#b37">(Rauch &amp; Tremaine 1996;</ref><ref type="bibr" target="#b38">Rauch &amp; Ingalls 1998)</ref>. Here we assume that orbits outside the loss-cone are fully populated.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.3">The tidal disruption loss-cone</head><p>Tidal effects can play a role when the star is not compact. The tidal forces from the MBH on the MS disrupt those MSs whose orbits carry them within the tidal radius r t ≈ (2M • /M ⋆ ) 1/3 R ⋆ of the MBH, where R ⋆ denotes the radius of the MS. This effect leads to a depletion of MSs when r &lt; r t , called the loss-cone for tidal disruptions. We only consider MSs if</p><formula xml:id="formula_21">ωp &lt; ωt ≡ 2.18 × 10 -3 M ⋆ M ⊙ 1/2 R ⋆ R ⊙ -3/2 . (<label>14</label></formula><formula xml:id="formula_22">)</formula><p>Note that the break up frequency ωt depends solely on the characteristics of the MS.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.4">Hydrodynamical collisions</head><p>Close to a MBH, MSs are likely to undergo multiple collisions in their lifetime (see e.g. <ref type="bibr" target="#b41">Spitzer &amp; Saslaw 1966)</ref>. The rate Γ coll at which a MS with radius R ⋆ has grazing collisions can be estimated by</p><formula xml:id="formula_23">Γ coll = n σ cs v = 3 -α MS 4π N h r 3 h a r h -α MS πR 2 ⋆ GM • a . (<label>15</label></formula><formula xml:id="formula_24">)</formula><p>Multiple collisions can lead to the disruption of the MS. <ref type="bibr" target="#b12">Freitag &amp; Benz (2005)</ref> showed that on average a MS is disrupted after N coll ≈ 30 collisions. This implies that MSs are saved from disruption by collisions within a Hubble time, if their distance to the MBH is larger than</p><formula xml:id="formula_25">ã &gt; ãcoll ≡ 1.6 × 10 -3 30 N coll 10/19 R ⋆ R ⊙ 20/19 M7/19 • ,<label>(16)</label></formula><p>where it was assumed that α MS = 1.4 as in our main model. MSs are contributing GWs to the EMBB if their orbits obey ã &gt; ãcoll .</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.3">Model of a galactic nucleus</head><p>To summarise, the method to compute the GW burst rate of a single galactic nucleus is as follows. We consider four distinct species of stars, that is 10M ⊙ BHs, 0.6M ⊙ WDs, 1.4M ⊙ neutron stars (NSs), and 1M ⊙ MSs. Their density profile is given by a slope of α BH = 2, α WD = 1.4, α NS = 1.5, α MS = 1.4 <ref type="bibr">(Alexander &amp; Hopman 2009)</ref>.</p><p>We assume that the enclosed number of MS stars within r h is</p><formula xml:id="formula_26">N h = M • /M ⊙ .</formula><p>We calibrate our model such that for the Galactic centre, the number of stars within 0.01 pc is equal to that found in <ref type="bibr">Alexander &amp; Hopman (2009)</ref>, to find C BH = 8 × 10 -3 , C WD = 0.09, C NS = 0.01, C MS = 1. From their models, we find that the relaxation time at 0.01 pc in the Galactic centre is 0.78 Gyr, leading to a calibration factor of C relax = 0.02.</p><p>We also consider a model suggested 1 by O' <ref type="bibr">Leary et al. (2008)</ref>. In this model, the density of the BHs at the radius of influence is higher by a factor 10 at r h compared to the main model, and the masses of the BHs are higher. Such models may be relevant for Galactic nuclei because of empirical hints that the initial mass function is much flatter than usual the Galactic centre (see e.g. <ref type="bibr" target="#b32">Nayakshin &amp; Sunyaev 2005;</ref><ref type="bibr" target="#b29">Maness et al. 2007</ref>). We note that there are no dynamical constraints on the amount or mass of BHs in the Galactic centre (e.g. <ref type="bibr" target="#b31">Mouawad et al. 2005;</ref><ref type="bibr" target="#b16">Ghez et al. 2008)</ref>. Since in systems with many, more massive BHs mass segregation is less pronounced, the scaling for the density profile is not straightforward; for example, the number of BHs enclosed within 0.01 pc is only a factor ∼ 2 higher than in our main model. Using the relaxation times given in O' <ref type="bibr">Leary et al. (2008)</ref>, we find that for this model M BH = 18M ⊙ ; C M = 1.6 × 10 -2 ; α BH = 2; and C relax = 3 × 10 -3 .</p><p>When using these models, we exclude certain orbits due to the four processes described in the previous section. Stars are only contributing GWs if the inequalities ( <ref type="formula" target="#formula_18">12</ref>), ( <ref type="formula" target="#formula_20">13</ref>), ( <ref type="formula" target="#formula_21">14</ref>) and ( <ref type="formula" target="#formula_25">16</ref>) are satisfied. As an illustration we show the orbit space around a MBH of <ref type="formula" target="#formula_0">1b</ref>). The boundaries of the populated parts of the orbit space of compact objects are caused by two processes; the inspiral process and the loss-cone. The cut-offs through the orbit space of MSs are caused by all four processes of §2.2. We note that the processes that limit the GW burst rate depend on the MBH mass.</p><formula xml:id="formula_27">M • = 10 6 M ⊙ for a BH of M ⋆ = 10 M ⊙ in figure (1a) and for a MS of M ⋆ = 1 M ⊙ in figure (</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3">GRAVITATIONAL WAVE BACKGROUND</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1">Gravitational wave energy in a single burst</head><p>For an eccentric Newtonian orbit, the amount of energy emitted in GWs in one period ∆E GW [see Eq. ( <ref type="formula" target="#formula_9">7</ref>)] and the distribution of this energy over frequencies dQ/d f is studied by <ref type="bibr" target="#b35">Peters &amp; Mathews (1963)</ref>. The emitted power peaks at a frequency f that is twice the circular frequency at periapse ω p . To simplify our analysis we assume that all energy ∆E GW is emitted at f = 2ω p , therefore</p><formula xml:id="formula_28">dQ d f = ∆E GW δ ( f -2ω p ). (<label>17</label></formula><formula xml:id="formula_29">)</formula><p>In reality, the spectrum is quite broad, but the exact shape of the spectrum is not important, since we sum over a very large number of bursts.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2">Gravitational wave energy density</head><p>We next integrate this spectrum over M • with the space number density of MBHs of <ref type="bibr" target="#b2">Allen &amp; Richstone (2002)</ref>, which we assume</p><p>1 O'Leary et al. (2008) consider a wide range of models, including models with steeper mass functions. We will refer to the model considered here as the "O'Leary et al. (2008) model" for brevity. O'Leary et al. (2008) assume a range of BH masses, which we collect here into a single averaged BH mass.</p><p>to be constant throughout the history of the Universe,</p><formula xml:id="formula_30">dn • dM • = 10 7 M • Gpc -3 10 5 M ⊙ &lt; M • &lt; 10 8 M ⊙ . (<label>18</label></formula><formula xml:id="formula_31">)</formula><p>The upper boundary comes from a sharp drop in the observed MBH number density around M • ≈ 10 8 M ⊙ . Due to a lack of information on MBHs of M • &lt; 10 6 M ⊙ , the lower boundary is arbitrarily chosen to be 10 5 M ⊙ . Although at frequencies between 10 -3 and 10 -2 Hz, MBHs of the lowest masses contribute most to the EMBB, decreasing the lower bound only mildly affects the EMBB. The energy density of GW bursts emitted by stars of species M is</p><formula xml:id="formula_32">Ė ( f ) = V d 2 Γ M da dω p ∆E GW δ ( f -2ω p ) dn • dM • dM • dω p da. (<label>19</label></formula><formula xml:id="formula_33">)</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3">Observed gravitational wave energy density</head><p>The GW spectrum observed by LISA is the accumulation of the GW radiation of all galaxies in the universe. The emitted spectrum Ė ( f em )d f em is the rate per unit proper time and per unit co-moving volume at which GW energy in the frequency range ( f em , f em + d f em ) are emitted. The total GW energy density</p><formula xml:id="formula_34">(dρ/d f )d f today with frequencies f = f em /(1 + z) in the range ( f , f + d f ) is then dρ d f d f = d f em dz dt dz Ė ( f em ) 1 + z = d f dz dt dz Ė [ f (1 + z)]. (<label>20</label></formula><formula xml:id="formula_35">)</formula><p>For 0 &lt; z &lt; 2, we follow <ref type="bibr">Barack &amp; Cutler (2004)</ref> in approximating t ≈ t 0 (1 + z) -1.18 , where a spatially flat Friedmann-Lemaître-Robertson-Walker Universe is assumed with Ω Λ = 0.70 and Ω M = 0.30 and the Universe's current age is t 0 = 0.964H -1 0 = 1.39 × 10 10 h -1 70 yr. For sources in the range 0 &lt; z &lt; 2, this is accurate to within ∼3 per cent. The approximation is justified since the EMBB is dominated by the nearby universe and contributions from 1 &lt; z &lt; 2 accounts for just 5-8 per cent of that of 0 &lt; z &lt; 2.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.4">Gravitational wave background for LISA</head><p>The energy density of an isotropic background of individually unresolvable GW sources is related to the spectral density in the LISA detector by</p><formula xml:id="formula_36">S GW ( f ) = 4G/(πc 2 f 2 ) dρ M /d f (Barack &amp; Cutler 2004), or S GW ( f ) = 4G πc 2 f 2 V dz dM • dω p da dt dz dn • dM • d 2 Γ M da dω p × ∆E GW δ [ f (1 + z) -2ω p ]<label>(21)</label></formula><p>where equations ( <ref type="formula" target="#formula_32">19</ref>) and (20) were used. The integral is taken over V representing that part of orbit space that is populated according to §2.2.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4">RESULTS</head><p>For our main model, the resulting EMBB ( f S GW ) 1/2 of the four species of stars is shown in figure (2). The EMBB is dominated by contributions from BHs. This is mainly due to two reasons. First, a single burst emitted by a BH is more energetic than a burst emitted  <ref type="formula" target="#formula_18">12</ref>), ( <ref type="formula" target="#formula_20">13</ref>), ( <ref type="formula" target="#formula_21">14</ref>) and ( <ref type="formula" target="#formula_25">16</ref>). The red line indicates the boundary in orbit space resulting from the condition r p a. The result is not very sensitive to the inner cutoff; imposing a hard cutoff at 10 -4 pc in figure (a) decreases ( f S GW ) 1/2 by ∼ 50 per cent.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Figure 2.</head><p>Comparison between the EMBB, instrumental noise of LISA <ref type="bibr" target="#b27">(Larson 2001)</ref>, the galactic WD binary background <ref type="bibr" target="#b27">(Larson 2001</ref>) and the BH EMRI (inspiral) background <ref type="bibr">(Barack &amp; Cutler 2004)</ref> with an inspiral rate of 10</p><p>-7 yr -1 . The EMBB is smaller than the other types of GW noise. The EMBB due to only BHs, WDs, NSs or MSs is shown in symbols and contributions from BHs dominate the spectrum. The EMBB of the O'Leary et al. (2008) model is also shown. Even though it is significantly higher than the EMBB in our preferred model, it is still lower than the instrumental noise of LISA.</p><p>by the other species of stars in a similar orbit. Second, the BH distribution is steeper due to mass-segregation which leads to a higher burst rate, see Eq. ( <ref type="formula" target="#formula_9">7</ref>). Note that the EMBB due to MSs is cut off at ∼ 10 -3 Hz, because tidal effects prohibit the existence of noncompact objects at small distances from the MBH.</p><p>The EMRI background is caused by BHs that spiral in to the MBH. These sources are excluded in our calculations by eliminating inspiral orbits, see §2.2.1. The expression for the EMRI background was taken from <ref type="bibr">Barack &amp; Cutler (2004)</ref> and scales with the inspiral rate. From <ref type="bibr" target="#b21">Hopman &amp; Alexander (2006b)</ref> we take an inspiral rate of 1 × 10 -7 yr -1 leading to a EMRI background at a level comparable to the instrumental noise of LISA.</p><p>In our favoured model the EMBB is well below the instrumental noise of LISA. At closest approach the EMBB ( f S GW ) 1/2 is a factor ∼ 10 below the instrumental noise of LISA, and a factor ∼ 19 lower than the confusion noise of Galactic WD binaries. The EMBB is also lower than the EMRI background in the interesting frequency range where the noise from EMRIs is stronger than that of the instrument itself.</p><p>The O' <ref type="bibr">Leary et al. (2008)</ref> model is also displayed in figure (2). In this model there are more, and more massive BHs, which raises the EMBB due to an increase in the number of BH bursts and an increase in the relaxation rate protecting stars from inspiral. <ref type="bibr">Figure (2)</ref> shows the EMBB is raised by a factor ∼ 6 on average with respect to our main model. However, even with this stellar distribution the EMBB is smaller than the instrumental noise of LISA by a factor ∼ 1.5, and a factor ∼ 3 including the noise of galactic WD binaries. Overall the sensitivity of the EMBB on the individual model parameters is not strong enough to raise the EMBB above the instrumental noise of LISA, without increasing M BH by a factor 10 and other parameters by even more.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5">SUMMARY AND DISCUSSION</head><p>Stars whose orbits carry them near the Schwarzschild radius of a MBH emit gravitational waves in the LISA frequency band. If the orbit of the star is very eccentric, the star emits bursts of GWs each peri-centre passage without necessarily spiraling in. Most extragalactic bursts are not individually resolvable and hence will constitute a gravitational wave background.</p><p>For our favoured model the EMBB is dominated by GW bursts from BHs, and is a factor ∼ 10 lower than the instrumental noise of LISA. Including the WD Galactic background increases the insignificance of the EMBB to a factor ∼ 19. Even for the O' <ref type="bibr">Leary et al. (2008)</ref> model, which has a much flatter mass function, the EMBB is smaller than the instrumental noise of LISA by a factor ∼ 1.5 (or a factor ∼ 3 including the WD Galactic background). The EMBB is also well below the EMRI background <ref type="bibr">(Barack &amp; Cutler 2004)</ref>. We conclude that the detection of GWs by LISA will not be hindered by a background of bursting sources.</p><p>As an additional application of our model, we revisit the possibility of direct detection of GW bursts in the Galactic centre, due to stars on relativistic orbits. <ref type="bibr" target="#b45">Yunes et al. (2008)</ref> have investigated the impact of including relativistic corrections to the description of the star's trajectory. The degree to which the relativistic corrections are important depends on the star's orbit and is largest for small pericentre distances. <ref type="bibr" target="#b45">Yunes et al. (2008)</ref> find that orbits with peri-centre velocities |v p | &gt; 0.25c account for approximately half of the events within the orbit space considered by <ref type="bibr" target="#b39">Rubbo et al. (2006)</ref> around a MBH of 3.7 × 10 6 M ⊙ . However, <ref type="bibr" target="#b39">Rubbo et al. (2006)</ref> incorporate tight, possibly relativistic orbits that are unpopulated according to our assumptions of the boundaries in orbitspace of §2.2 (see also the appendix). Assuming our main model of a galactic nucleus, a similar MBH mass as <ref type="bibr" target="#b39">Rubbo et al. (2006)</ref> and integrating over all frequencies that can be detected by LISA (See Eq. ( <ref type="formula" target="#formula_4">4</ref>) in <ref type="bibr" target="#b24">Hopman et al. (2007)</ref> with a signal to noise of 5), relativistic orbits account for ∼ 1 per cent of all events within the orbit space considered by our main model. We conclude that LISA is unlikely to detect relativistic bursts from the Galactic centre. 1 10 100 1000 10000 x 0.001 0.01 0.1 1 j 2 0 0.02 0.04 0.06 0.08 0.1 0.12 0.14 0.16 0.18 0.2 Figure A2. Same as previous figure, but now with energy losses to GWs.</p><p>Comparison of the two figures shows that the distribution is depleted in presence of GW emission, approximately in the region where t i &lt; min(t j ,t x ) ∼ t j . Note that some stars do remain within the t i &lt; min(t j ,t x ) region; these are inspiraling stars, and their contribution to the EMBB was accounted for by <ref type="bibr">Barack &amp; Cutler (2004)</ref>.</p><p>for the case with GW emission. The figures clearly shows that the region where t i &lt; t j is depleted if there are energy losses to GWs.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. Boundaries in orbit space around a MBH of M • = 10 6 M ⊙ for a BH of M ⋆ = 10M ⊙ in Fig. 1a and of a MS of M ⋆ = 1M ⊙ in Fig. 1b. Stellar orbits are populated in the shaded area only. The figures are representative of all relevant stars and MBHs where the cuts scale according to Eq. (12), (13), (14) and (16). The red line indicates the boundary in orbit space resulting from the condition r p a. The result is not very sensitive to the inner cutoff; imposing a hard cutoff at 10 -4 pc in figure (a) decreases ( f S GW ) 1/2 by ∼ 50 per cent.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure A1 .Figure A2 .</head><label>A1A2</label><figDesc>Figure A1. Distribution f (x, j 2 ) of stars without GW emission (arbitrary scale). The red solid line denotes the loss-cone, the blue dotted line delineates t j = t i , and the green dashed line delineates t x = t i .</figDesc></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>ACKNOWLEDGEMENTS</head><p>CH is supported by a <rs type="grantName">Veni scholarship</rs> from the <rs type="funder">Netherlands Organisation for Scientific Research (NWO)</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_e5UPPaQ">
+					<orgName type="grant-name">Veni scholarship</orgName>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>APPENDIX A: DEPLETION OF PHASE SPACE DUE TO GRAVITATIONAL WAVE INSPIRAL</head><p>Throughout this paper, we have not considered the contribution of stars in the region where t J &gt; t i (see §2.2.1). Stars in this region do contribute to the EMBB: these stars spiral in and become eventually directly resolvable EMRIs. Before they can be resolved, however, they contribute to a stochastic background. This contribution to the EMBB was studied by <ref type="bibr">Barack &amp; Cutler (2004)</ref>, and we find that it is dominant over the contribution of fly-bys (see figure <ref type="figure">1</ref>).</p><p>We stress that our analysis as presented in this paper does not apply to the region t J &gt; t i , because orbits in this region are less likely to be populated. In this appendix we analyse a toy model of Monte Carlo (MC) simulations based on the method by <ref type="bibr" target="#b39">Shapiro &amp; Marchant (1978)</ref> to show this. For details on the method, we refer to <ref type="bibr" target="#b39">Shapiro &amp; Marchant (1978)</ref> and <ref type="bibr" target="#b23">Hopman (2009)</ref>. The model does not include mass-segregation, and is not intended to faithfully represent a galactic nucleus, but is instead used to highlight the difference in the dynamics in the two regimes delineated by t j = t i .</p><p>Consider the following simple dynamical model: Energy diffusion -Let the (scaled) energy x perform a random walk such that the diffusion coefficient is</p><p>The form of this coefficient is such that it reproduces the <ref type="bibr" target="#b4">Bahcall &amp; Wolf (1976)</ref> solution with distribution function f (x) ∝ x 1/4 ; the prefactor is for consistency with <ref type="bibr" target="#b23">Hopman (2009)</ref>. (Here positive energy implies that the star is bound to the MBH).</p><p>Angular momentum diffusion -Let the angular momentum j be scaled by the circular angular momentum, such that by definition 0 &lt; j &lt; 1. Let j perform a random walk such that the diffusion coefficient is (see <ref type="bibr" target="#b23">Hopman (2009)</ref> for the prefactor)</p><p>Boundary conditions -Let the actual angular momentum of the loss-cone be independent of energy, such that if it is scaled by the circular angular momentum, it becomes</p><p>with x max some maximal energy.</p><p>Energy loss by GWs -Let the loss of energy per unit time be ẋGW = x 3/2 j j lc (x)</p><p>which has a scaling such as that in GW emission, and the constant τ is chosen here to be τ = 10 -6 .</p><p>This leads to the following dynamical equations j t+δ t = j t + r D j j δt;</p><p>(A5)</p><p>where in these equations r is a normally distributed random variable with mean zero and unit variance. The three terms in the dynamical equations give rise to three time-scales: the time scale for changes in j of order of itself due to scattering</p><p>the time scale for changes in x of order of itself due to scattering</p><p>and the time for changes in x of order of itself due to GW emission</p><p>We simulate the dynamical process described above with and without GW emission by means of a MC simulation with about 10 6 particles. We follow the <ref type="bibr" target="#b39">Shapiro &amp; Marchant (1978)</ref> cloning scheme in order to resolve the distribution function over several orders of magnitude. We define the distribution f (x, j 2 ) as</p><p>where N is the normalised number of particles and the prefactor x 5/4 / j 2 was added in order to divide out the dependence on energy and angular momentum if the distribution is isotropic and there are no GWs. We show the resulting normalised steady state distribution in figure (A1) for the case without GW emission and figure (A2)</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Alexander</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Hopman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">590</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+	<note>L29</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Alexander</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Hopman</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2009">2009</date>
+			<biblScope unit="volume">697</biblScope>
+			<biblScope unit="page">1861</biblScope>
+		</imprint>
+	</monogr>
+	<note>ArXiv e-prints</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Allen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Richstone</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">AJ</title>
+		<imprint>
+			<biblScope unit="volume">124</biblScope>
+			<biblScope unit="page">3035</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Amaro-Seoane</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Gair</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Freitag</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Miller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Mandel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Cutler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Babak</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Clas. Quantum Gravity</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page">113</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N</forename><surname>Bahcall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Wolf</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">209</biblScope>
+			<biblScope unit="page">214</biblScope>
+			<date type="published" when="1976">1976</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N</forename><surname>Bahcall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Wolf</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">216</biblScope>
+			<biblScope unit="page">883</biblScope>
+			<date type="published" when="1977">1977</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><surname>Barack</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Cutler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. D</title>
+		<imprint>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="page">122002</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Cohn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Kulsrud</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">226</biblScope>
+			<biblScope unit="page">1087</biblScope>
+			<date type="published" when="1978">1978</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">S</forename><surname>Finn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">S</forename><surname>Thorne</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. D</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="page">124021</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Frank</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Rees</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">MNRAS</title>
+		<imprint>
+			<biblScope unit="volume">176</biblScope>
+			<biblScope unit="page">633</biblScope>
+			<date type="published" when="1976">1976</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Freitag</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Clas. Quantum Gravity</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page">4033</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Freitag</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="page" from="583" to="L604" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Freitag</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Benz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">MNRAS</title>
+		<imprint>
+			<biblScope unit="page">245</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Freitag</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Amaro-Seoane</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Kalogera</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">649</biblScope>
+			<biblScope unit="page">91</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Gair</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Barack</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Creighton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Cutler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Larson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">S</forename><surname>Phinney</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Vallisneri</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Clas. Quantum Gravity</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page">1595</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Gair</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:0811.0188</idno>
+		<imprint>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>ArXiv e-prints</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Ghez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IAU symposium</title>
+		<imprint>
+			<biblScope unit="volume">248</biblScope>
+			<biblScope unit="page">52</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Glampedakis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Clas. Quantum Gravity</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page">605</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Hils</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">L</forename><surname>Bender</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">445</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><surname>Hopman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Alexander</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">629</biblScope>
+			<biblScope unit="page">362</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><surname>Hopman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Alexander</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">645</biblScope>
+			<biblScope unit="page">1152</biblScope>
+			<date type="published" when="2006">2006a</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><surname>Hopman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Alexander</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2006">2006b, ApJ, 645, L133</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><surname>Hopman</surname></persName>
+		</author>
+		<idno>astro-ph/0608460</idno>
+		<imprint>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><surname>Hopman</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:0906.0374</idno>
+		<imprint>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>ArXiv e-prints</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><surname>Hopman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Freitag</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Larson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">MNRAS</title>
+		<imprint>
+			<biblScope unit="volume">378</biblScope>
+			<biblScope unit="page">129</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">B</forename><surname>Ivanov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">MNRAS</title>
+		<imprint>
+			<biblScope unit="volume">336</biblScope>
+			<biblScope unit="page">373</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">U</forename><surname>Keshet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Hopman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Alexander</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:0901.4343</idno>
+		<imprint>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>ArXiv e-prints</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Online Sensitivity Curve Generator</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Larson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Larson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Hellings</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">A</forename><surname>Hiscock</surname></persName>
+		</author>
+		<ptr target="http://www.srl.caltech.edu/∼shane/sensitivity/Rev.D,66" />
+	</analytic>
+	<monogr>
+		<title level="j">Phys</title>
+		<imprint>
+			<biblScope unit="page">62001</biblScope>
+			<date type="published" when="2001">2001. 2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Lightman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Shapiro</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">211</biblScope>
+			<biblScope unit="page">244</biblScope>
+			<date type="published" when="1977">1977</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Maness Hl</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2007">2007</date>
+			<biblScope unit="volume">669</biblScope>
+			<biblScope unit="page">1024</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Merritt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ferrarese</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">MNRAS</title>
+		<imprint>
+			<biblScope unit="volume">320</biblScope>
+			<biblScope unit="page">30</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">N</forename><surname>Mouawad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Eckart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Pfalzner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Schödel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Moultaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Spurzem</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Astron. Nachr</title>
+		<imprint>
+			<biblScope unit="volume">326</biblScope>
+			<biblScope unit="page">83</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nayakshin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Sunyaev</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">MNRAS</title>
+		<imprint>
+			<biblScope unit="volume">364</biblScope>
+			<biblScope unit="page">23</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>O'leary</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Kocsis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Loeb</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2008">2008</date>
+			<biblScope unit="page">807</biblScope>
+		</imprint>
+	</monogr>
+	<note>ArXiv e-prints</note>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J E</forename><surname>Peebles</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">178</biblScope>
+			<biblScope unit="page">371</biblScope>
+			<date type="published" when="1972">1972</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Peters</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mathews</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev</title>
+		<imprint>
+			<biblScope unit="volume">131</biblScope>
+			<biblScope unit="page">435</biblScope>
+			<date type="published" when="1963">1963</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">D</forename><surname>Quinlan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Hernquist</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sigurdsson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">440</biblScope>
+			<biblScope unit="page">554</biblScope>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">P</forename><surname>Rauch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tremaine</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">New Astron</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page">149</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">P</forename><surname>Rauch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Ingalls</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">MNRAS</title>
+		<imprint>
+			<biblScope unit="volume">299</biblScope>
+			<biblScope unit="page">1231</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">J</forename><surname>Rubbo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Holley-Bockelmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">S</forename><surname>Finn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Shapiro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">B</forename><surname>Marchant</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">649</biblScope>
+			<biblScope unit="page">603</biblScope>
+			<date type="published" when="1978">2006. 1978</date>
+		</imprint>
+	</monogr>
+	<note>ApJ</note>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sigurdsson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Rees</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">MNRAS</title>
+		<imprint>
+			<biblScope unit="volume">284</biblScope>
+			<biblScope unit="page">318</biblScope>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">J</forename><surname>Spitzer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">C</forename><surname>Saslaw</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">143</biblScope>
+			<biblScope unit="page">400</biblScope>
+			<date type="published" when="1966">1966</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<monogr>
+		<title level="m" type="main">Dynamical evolution of globular clusters</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Spitzer</surname></persName>
+		</author>
+		<editor>L. Spitzer</editor>
+		<imprint>
+			<date type="published" when="1987">1987</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Tremaine</forename><forename type="middle">S</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">574</biblScope>
+			<biblScope unit="page">704</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Young</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">242</biblScope>
+			<biblScope unit="page">1232</biblScope>
+			<date type="published" when="1980">1980</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">N</forename><surname>Yunes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">F</forename><surname>Sopuerta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">J</forename><surname>Rubbo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Holley-Bockelmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">675</biblScope>
+			<biblScope unit="page">604</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

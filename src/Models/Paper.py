@@ -169,14 +169,19 @@ class DownloadInfo:
 
 @dataclass
 class TextArtifact:
-    """Describe extracted or processed text stored outside the model."""
+    """Metadata about text extracted from or processed from a paper."""
 
-    local_path: Optional[str] = None
-    sha256: Optional[str] = None
-    character_count: Optional[int] = None
-    token_count: Optional[int] = None
-    language: Optional[str] = None
-    created_at: Optional[datetime] = None
+    local_path: str | None = None
+    sha256: str | None = None
+
+    character_count: int = 0
+    token_count: int | None = None
+    page_count: int | None = None
+
+    language: str | None = None
+    extraction_method: str | None = None
+
+    created_at: datetime | None = None
 
 
 @dataclass
