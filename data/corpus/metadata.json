@@ -1,0 +1,11 @@
+{
+  "created_at": "2026-10-16T01:31:39.250412+00:00",
+  "source": "arXiv API",
+  "query": "cat:cs.LG AND submittedDate:[202501010000 TO 202601012359]",
+  "category": "cs.LG",
+  "start_date": "20250101",
+  "end_date": "20260101",
+  "requested_limit": 100,
+  "record_count": 100,
+  "manifest": "data/corpus/manifest.jsonl"
+}

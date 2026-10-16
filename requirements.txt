@@ -20,3 +20,4 @@ seaborn>=0.12.2
 # NLP
 spacy>=3.8.16
 nltk>=3.8.0
+arxiv==4.0.1

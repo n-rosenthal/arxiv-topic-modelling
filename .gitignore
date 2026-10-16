@@ -1,6 +1,7 @@
 .venv
 .mypy_cache
 .env
+.vscode
 
 *.jsonl
 *.pyc
