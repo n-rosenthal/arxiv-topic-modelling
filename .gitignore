@@ -4,4 +4,16 @@
 .vscode
 
 *.jsonl
+*.json
+*.pkl
+
 *.pyc
+*cpython-*
+
+*.sqlite3
+
+backup-*
+
+__pycache__
+
+*.pdf
