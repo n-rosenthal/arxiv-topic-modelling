@@ -1,7 +1,7 @@
 """
 src/Models/Processing/Status.py
 
-Defines the `ProcessingStatus` enum class for registering individual statuses in the scientific paper procesisng pipeline.
+Defines the `ProcessingStatus` enum for statuses in the paper procesisng pipeline.
 """
 from __future__ import annotations
 
