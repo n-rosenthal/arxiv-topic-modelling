@@ -23,6 +23,7 @@ from pathlib import Path
 from typing import Any, Optional
 import json
 
+from src.Models.Processing import ProcessingStatus
 
 def utc_now() -> datetime:
     """Return the current timezone-aware UTC datetime."""
@@ -38,17 +39,6 @@ def normalize_datetime(value: Optional[datetime]) -> Optional[str]:
         value = value.replace(tzinfo=timezone.utc)
 
     return value.isoformat()
-
-
-class ProcessingStatus(str, Enum):
-    """Status of an individual processing stage."""
-
-    PENDING = "pending"
-    RUNNING = "running"
-    COMPLETED = "completed"
-    FAILED = "failed"
-    SKIPPED = "skipped"
-
 
 class ProcessingStage(str, Enum):
     """Stages in the paper-processing pipeline."""

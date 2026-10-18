@@ -43,11 +43,16 @@ import requests
 # Configuração
 # ---------------------------------------------------------------------------
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
+def project_path(value: str) -> Path:
+    """Resolve caminhos relativos a partir da raiz do projeto."""
+    path = Path(value).expanduser()
 
-DEFAULT_MANIFEST = PROJECT_ROOT / "data" / "corpus" / "manifest.jsonl"
-DEFAULT_DATABASE = PROJECT_ROOT / "data" / "corpus" / "pipeline.sqlite3"
-DEFAULT_PDF_DIR = PROJECT_ROOT / "data" / "pdfs"
+    if not path.is_absolute():
+        path = PROJECT_ROOT / path
+
+    return path.resolve()
+    
+PROJECT_ROOT = project_path(".")
 
 DEFAULT_TIMEOUT = 120
 DEFAULT_ATTEMPTS = 3
@@ -515,7 +520,16 @@ def validate_pdf(path: Path) -> bool:
                 return False
 
         try:
-            import fitz
+            from typing import TYPE_CHECKING
+
+            if TYPE_CHECKING:
+                # For type checkers only
+                import fitz  # type: ignore
+            else:
+                try:
+                    import fitz  # type: ignore
+                except Exception:  # pragma: no cover - runtime may lack PyMuPDF
+                    fitz = None  # type: ignore
 
             with fitz.open(path) as document:
                 if document.page_count < 1:
@@ -746,17 +760,18 @@ def download_pdf(
             )
 
             with requests.get(
-                url,
-                stream=True,
-                timeout=timeout,
-                headers={
-                    "User-Agent": (
-                        "arxiv-topic-modelling/1.0 "
-                        "(academic research corpus)"
+                if fitz is None:
+                    logger.debug(
+                        "PyMuPDF não instalado; validação limitada à assinatura PDF."
                     )
-                },
-            ) as response:
-                response.raise_for_status()
+                else:
+                    try:
+                        with fitz.open(path) as document:
+                            if document.page_count < 1:
+                                return False
+                    except Exception as exc:
+                        logger.debug("Erro abrindo PDF com PyMuPDF (%s): %s", path, exc)
+                        return False
 
                 with temporary.open("wb") as file:
                     for chunk in response.iter_content(
@@ -1025,16 +1040,16 @@ def build_parser() -> argparse.ArgumentParser:
 
     parser.add_argument(
         "--manifest",
-        type=Path,
-        default=DEFAULT_MANIFEST,
-        help="Caminho para manifest.jsonl.",
+        type=project_path,
+        default=PROJECT_ROOT / "data" / "corpus" / "manifest.jsonl",
+        help="Caminho do manifesto JSONL a ser processado.",
     )
 
     parser.add_argument(
         "--db",
-        type=Path,
-        default=DEFAULT_DATABASE,
-        help="Caminho para o banco SQLite.",
+        type=project_path,
+        default=PROJECT_ROOT / "data" / "corpus" / "pipeline.sqlite3",
+        help="Banco SQLite que registra o estado da ingestão.",
     )
 
     parser.add_argument(

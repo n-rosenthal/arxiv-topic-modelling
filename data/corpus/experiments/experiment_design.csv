@@ -1,0 +1,57 @@
+experiment_id,category,category_area,category_label,interval_id,start_year,end_year
+cs_AI__2001_2004,cs.AI,cs,Artificial Intelligence,2001_2004,2001,2004
+cs_CL__2001_2004,cs.CL,cs,Computation and Language,2001_2004,2001,2004
+cs_CV__2001_2004,cs.CV,cs,Computer Vision and Pattern Recognition,2001_2004,2001,2004
+cs_IR__2001_2004,cs.IR,cs,Information Retrieval,2001_2004,2001,2004
+cs_LG__2001_2004,cs.LG,cs,Machine Learning,2001_2004,2001,2004
+cs_NE__2001_2004,cs.NE,cs,Neural and Evolutionary Computing,2001_2004,2001,2004
+stat_ML__2001_2004,stat.ML,stat,Machine Learning (Statistics),2001_2004,2001,2004
+math_OC__2001_2004,math.OC,math,Optimization and Control,2001_2004,2001,2004
+cs_AI__2005_2008,cs.AI,cs,Artificial Intelligence,2005_2008,2005,2008
+cs_CL__2005_2008,cs.CL,cs,Computation and Language,2005_2008,2005,2008
+cs_CV__2005_2008,cs.CV,cs,Computer Vision and Pattern Recognition,2005_2008,2005,2008
+cs_IR__2005_2008,cs.IR,cs,Information Retrieval,2005_2008,2005,2008
+cs_LG__2005_2008,cs.LG,cs,Machine Learning,2005_2008,2005,2008
+cs_NE__2005_2008,cs.NE,cs,Neural and Evolutionary Computing,2005_2008,2005,2008
+stat_ML__2005_2008,stat.ML,stat,Machine Learning (Statistics),2005_2008,2005,2008
+math_OC__2005_2008,math.OC,math,Optimization and Control,2005_2008,2005,2008
+cs_AI__2009_2012,cs.AI,cs,Artificial Intelligence,2009_2012,2009,2012
+cs_CL__2009_2012,cs.CL,cs,Computation and Language,2009_2012,2009,2012
+cs_CV__2009_2012,cs.CV,cs,Computer Vision and Pattern Recognition,2009_2012,2009,2012
+cs_IR__2009_2012,cs.IR,cs,Information Retrieval,2009_2012,2009,2012
+cs_LG__2009_2012,cs.LG,cs,Machine Learning,2009_2012,2009,2012
+cs_NE__2009_2012,cs.NE,cs,Neural and Evolutionary Computing,2009_2012,2009,2012
+stat_ML__2009_2012,stat.ML,stat,Machine Learning (Statistics),2009_2012,2009,2012
+math_OC__2009_2012,math.OC,math,Optimization and Control,2009_2012,2009,2012
+cs_AI__2013_2016,cs.AI,cs,Artificial Intelligence,2013_2016,2013,2016
+cs_CL__2013_2016,cs.CL,cs,Computation and Language,2013_2016,2013,2016
+cs_CV__2013_2016,cs.CV,cs,Computer Vision and Pattern Recognition,2013_2016,2013,2016
+cs_IR__2013_2016,cs.IR,cs,Information Retrieval,2013_2016,2013,2016
+cs_LG__2013_2016,cs.LG,cs,Machine Learning,2013_2016,2013,2016
+cs_NE__2013_2016,cs.NE,cs,Neural and Evolutionary Computing,2013_2016,2013,2016
+stat_ML__2013_2016,stat.ML,stat,Machine Learning (Statistics),2013_2016,2013,2016
+math_OC__2013_2016,math.OC,math,Optimization and Control,2013_2016,2013,2016
+cs_AI__2017_2020,cs.AI,cs,Artificial Intelligence,2017_2020,2017,2020
+cs_CL__2017_2020,cs.CL,cs,Computation and Language,2017_2020,2017,2020
+cs_CV__2017_2020,cs.CV,cs,Computer Vision and Pattern Recognition,2017_2020,2017,2020
+cs_IR__2017_2020,cs.IR,cs,Information Retrieval,2017_2020,2017,2020
+cs_LG__2017_2020,cs.LG,cs,Machine Learning,2017_2020,2017,2020
+cs_NE__2017_2020,cs.NE,cs,Neural and Evolutionary Computing,2017_2020,2017,2020
+stat_ML__2017_2020,stat.ML,stat,Machine Learning (Statistics),2017_2020,2017,2020
+math_OC__2017_2020,math.OC,math,Optimization and Control,2017_2020,2017,2020
+cs_AI__2021_2024,cs.AI,cs,Artificial Intelligence,2021_2024,2021,2024
+cs_CL__2021_2024,cs.CL,cs,Computation and Language,2021_2024,2021,2024
+cs_CV__2021_2024,cs.CV,cs,Computer Vision and Pattern Recognition,2021_2024,2021,2024
+cs_IR__2021_2024,cs.IR,cs,Information Retrieval,2021_2024,2021,2024
+cs_LG__2021_2024,cs.LG,cs,Machine Learning,2021_2024,2021,2024
+cs_NE__2021_2024,cs.NE,cs,Neural and Evolutionary Computing,2021_2024,2021,2024
+stat_ML__2021_2024,stat.ML,stat,Machine Learning (Statistics),2021_2024,2021,2024
+math_OC__2021_2024,math.OC,math,Optimization and Control,2021_2024,2021,2024
+cs_AI__2025_2026,cs.AI,cs,Artificial Intelligence,2025_2026,2025,2026
+cs_CL__2025_2026,cs.CL,cs,Computation and Language,2025_2026,2025,2026
+cs_CV__2025_2026,cs.CV,cs,Computer Vision and Pattern Recognition,2025_2026,2025,2026
+cs_IR__2025_2026,cs.IR,cs,Information Retrieval,2025_2026,2025,2026
+cs_LG__2025_2026,cs.LG,cs,Machine Learning,2025_2026,2025,2026
+cs_NE__2025_2026,cs.NE,cs,Neural and Evolutionary Computing,2025_2026,2025,2026
+stat_ML__2025_2026,stat.ML,stat,Machine Learning (Statistics),2025_2026,2025,2026
+math_OC__2025_2026,math.OC,math,Optimization and Control,2025_2026,2025,2026

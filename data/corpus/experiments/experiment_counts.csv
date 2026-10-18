@@ -1,0 +1,57 @@
+experiment_id,category,interval_id,start_year,end_year,query_matches,primary_category_count,secondary_category_count,abstract_available_count,pdf_url_available_count,mean_abstract_words,min_submission_year_observed,max_submission_year_observed,collection_status,error
+cs_AI__2001_2004,cs.AI,2001_2004,2001,2004,485,300,185,485,485,135.71,2001,2004,collected,
+cs_CL__2001_2004,cs.CL,2001_2004,2001,2004,254,216,38,254,254,109.19,2001,2004,collected,
+cs_CV__2001_2004,cs.CV,2001_2004,2001,2004,81,41,40,81,81,124.95,2001,2004,collected,
+cs_IR__2001_2004,cs.IR,2001_2004,2001,2004,109,38,71,109,109,136.91,2001,2004,collected,
+cs_LG__2001_2004,cs.LG,2001_2004,2001,2004,136,71,65,136,136,138.04,2001,2004,collected,
+cs_NE__2001_2004,cs.NE,2001_2004,2001,2004,129,60,69,129,129,134.72,2001,2004,collected,
+math_OC__2001_2004,math.OC,2001_2004,2001,2004,332,209,123,332,332,91.83,2001,2004,collected,
+stat_ML__2001_2004,stat.ML,2001_2004,2001,2004,3,0,3,3,3,156,2002,2004,collected,
+cs_AI__2005_2008,cs.AI,2005_2008,2005,2008,795,430,365,795,795,127.78,2005,2008,collected,
+cs_CL__2005_2008,cs.CL,2005_2008,2005,2008,213,143,70,213,213,116.62,2005,2008,collected,
+cs_CV__2005_2008,cs.CV,2005_2008,2005,2008,215,145,70,215,215,132.14,2005,2008,collected,
+cs_IR__2005_2008,cs.IR,2005_2008,2005,2008,276,133,143,276,276,135.33,2005,2008,collected,
+cs_LG__2005_2008,cs.LG,2005_2008,2005,2008,359,202,157,359,359,139.43,2005,2008,collected,
+cs_NE__2005_2008,cs.NE,2005_2008,2005,2008,322,218,104,322,322,126.61,2005,2008,collected,
+math_OC__2005_2008,math.OC,2005_2008,2005,2008,1002,644,358,1002,1002,105.46,2005,2008,collected,
+stat_ML__2005_2008,stat.ML,2005_2008,2005,2008,146,76,70,146,146,141.9,2005,2008,collected,
+cs_AI__2009_2012,cs.AI,2009_2012,2009,2012,2780,1805,975,2780,2780,141.64,2009,2012,collected,
+cs_CL__2009_2012,cs.CL,2009_2012,2009,2012,527,379,148,527,527,135.67,2009,2012,collected,
+cs_CV__2009_2012,cs.CV,2009_2012,2009,2012,1399,1041,358,1399,1399,144.84,2009,2012,collected,
+cs_IR__2009_2012,cs.IR,2009_2012,2009,2012,947,541,406,947,947,149.07,2009,2012,collected,
+cs_LG__2009_2012,cs.LG,2009_2012,2009,2012,2373,1366,1007,2373,2373,146.57,2009,2012,collected,
+cs_NE__2009_2012,cs.NE,2009_2012,2009,2012,674,407,267,674,674,139.72,2009,2012,collected,
+math_OC__2009_2012,math.OC,2009_2012,2009,2012,3357,2050,1307,3357,3357,123.94,2009,2012,collected,
+stat_ML__2009_2012,stat.ML,2009_2012,2009,2012,1997,734,1263,1997,1997,144.0,2009,2012,collected,
+cs_AI__2013_2016,cs.AI,2013_2016,2013,2016,5819,3508,2311,5819,5819,147.04,2013,2016,collected,
+cs_CL__2013_2016,cs.CL,2013_2016,2013,2016,3415,2508,907,3415,3415,139.8,2013,2016,collected,
+cs_CV__2013_2016,cs.CV,2013_2016,2013,2016,8099,6701,1398,8099,8099,157.94,2013,2016,collected,
+cs_IR__2013_2016,cs.IR,2013_2016,2013,2016,1877,972,905,1877,1877,158.38,2013,2016,collected,
+cs_LG__2013_2016,cs.LG,2013_2016,2013,2016,9212,4080,5132,9212,9212,154.91,2013,2016,collected,
+cs_NE__2013_2016,cs.NE,2013_2016,2013,2016,2361,1014,1347,2361,2361,148.92,2013,2016,collected,
+math_OC__2013_2016,math.OC,2013_2016,2013,2016,0,0,0,0,0,0,,,failed,HTTPError: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=cat%3Amath.OC+AND+submittedDate%3A%5B201301010000+TO+201612312359%5D&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100)
+stat_ML__2013_2016,stat.ML,2013_2016,2013,2016,4400,1974,2426,4400,4400,156.42,2015,2016,failed,HTTPError: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=cat%3Astat.ML+AND+submittedDate%3A%5B201301010000+TO+201612312359%5D&id_list=&sortBy=submittedDate&sortOrder=descending&start=4400&max_results=100)
+cs_AI__2017_2020,cs.AI,2017_2020,2017,2020,0,0,0,0,0,0,,,failed,HTTPError: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=cat%3Acs.AI+AND+submittedDate%3A%5B201701010000+TO+202012312359%5D&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100)
+cs_CL__2017_2020,cs.CL,2017_2020,2017,2020,0,0,0,0,0,0,,,failed,HTTPError: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=cat%3Acs.CL+AND+submittedDate%3A%5B201701010000+TO+202012312359%5D&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100)
+cs_CV__2017_2020,cs.CV,2017_2020,2017,2020,0,0,0,0,0,0,,,failed,HTTPError: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=cat%3Acs.CV+AND+submittedDate%3A%5B201701010000+TO+202012312359%5D&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100)
+cs_IR__2017_2020,cs.IR,2017_2020,2017,2020,0,0,0,0,0,0,,,failed,HTTPError: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=cat%3Acs.IR+AND+submittedDate%3A%5B201701010000+TO+202012312359%5D&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100)
+cs_LG__2017_2020,cs.LG,2017_2020,2017,2020,0,0,0,0,0,0,,,failed,HTTPError: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=cat%3Acs.LG+AND+submittedDate%3A%5B201701010000+TO+202012312359%5D&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100)
+cs_NE__2017_2020,cs.NE,2017_2020,2017,2020,0,0,0,0,0,0,,,failed,HTTPError: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=cat%3Acs.NE+AND+submittedDate%3A%5B201701010000+TO+202012312359%5D&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100)
+math_OC__2017_2020,math.OC,2017_2020,2017,2020,0,0,0,0,0,0,,,failed,HTTPError: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=cat%3Amath.OC+AND+submittedDate%3A%5B201701010000+TO+202012312359%5D&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100)
+stat_ML__2017_2020,stat.ML,2017_2020,2017,2020,0,0,0,0,0,0,,,failed,HTTPError: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=cat%3Astat.ML+AND+submittedDate%3A%5B201701010000+TO+202012312359%5D&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100)
+cs_AI__2021_2024,cs.AI,2021_2024,2021,2024,0,0,0,0,0,0,,,failed,HTTPError: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=cat%3Acs.AI+AND+submittedDate%3A%5B202101010000+TO+202412312359%5D&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100)
+cs_CL__2021_2024,cs.CL,2021_2024,2021,2024,0,0,0,0,0,0,,,failed,HTTPError: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=cat%3Acs.CL+AND+submittedDate%3A%5B202101010000+TO+202412312359%5D&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100)
+cs_CV__2021_2024,cs.CV,2021_2024,2021,2024,0,0,0,0,0,0,,,failed,HTTPError: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=cat%3Acs.CV+AND+submittedDate%3A%5B202101010000+TO+202412312359%5D&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100)
+cs_IR__2021_2024,cs.IR,2021_2024,2021,2024,0,0,0,0,0,0,,,failed,HTTPError: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=cat%3Acs.IR+AND+submittedDate%3A%5B202101010000+TO+202412312359%5D&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100)
+cs_LG__2021_2024,cs.LG,2021_2024,2021,2024,4600,2236,2364,4600,4600,179.22,2024,2024,failed,HTTPError: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=cat%3Acs.LG+AND+submittedDate%3A%5B202101010000+TO+202412312359%5D&id_list=&sortBy=submittedDate&sortOrder=descending&start=4600&max_results=100)
+cs_NE__2021_2024,cs.NE,2021_2024,2021,2024,0,0,0,0,0,0,,,failed,HTTPError: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=cat%3Acs.NE+AND+submittedDate%3A%5B202101010000+TO+202412312359%5D&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100)
+math_OC__2021_2024,math.OC,2021_2024,2021,2024,0,0,0,0,0,0,,,failed,HTTPError: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=cat%3Amath.OC+AND+submittedDate%3A%5B202101010000+TO+202412312359%5D&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100)
+stat_ML__2021_2024,stat.ML,2021_2024,2021,2024,0,0,0,0,0,0,,,failed,HTTPError: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=cat%3Astat.ML+AND+submittedDate%3A%5B202101010000+TO+202412312359%5D&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100)
+cs_AI__2025_2026,cs.AI,2025_2026,2025,2026,0,0,0,0,0,0,,,failed,HTTPError: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=cat%3Acs.AI+AND+submittedDate%3A%5B202501010000+TO+202612312359%5D&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100)
+cs_CL__2025_2026,cs.CL,2025_2026,2025,2026,0,0,0,0,0,0,,,failed,HTTPError: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=cat%3Acs.CL+AND+submittedDate%3A%5B202501010000+TO+202612312359%5D&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100)
+cs_CV__2025_2026,cs.CV,2025_2026,2025,2026,0,0,0,0,0,0,,,failed,HTTPError: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=cat%3Acs.CV+AND+submittedDate%3A%5B202501010000+TO+202612312359%5D&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100)
+cs_IR__2025_2026,cs.IR,2025_2026,2025,2026,0,0,0,0,0,0,,,failed,HTTPError: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=cat%3Acs.IR+AND+submittedDate%3A%5B202501010000+TO+202612312359%5D&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100)
+cs_LG__2025_2026,cs.LG,2025_2026,2025,2026,0,0,0,0,0,0,,,failed,HTTPError: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=cat%3Acs.LG+AND+submittedDate%3A%5B202501010000+TO+202612312359%5D&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100)
+cs_NE__2025_2026,cs.NE,2025_2026,2025,2026,0,0,0,0,0,0,,,failed,HTTPError: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=cat%3Acs.NE+AND+submittedDate%3A%5B202501010000+TO+202612312359%5D&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100)
+math_OC__2025_2026,math.OC,2025_2026,2025,2026,0,0,0,0,0,0,,,failed,HTTPError: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=cat%3Amath.OC+AND+submittedDate%3A%5B202501010000+TO+202612312359%5D&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100)
+stat_ML__2025_2026,stat.ML,2025_2026,2025,2026,0,0,0,0,0,0,,,failed,HTTPError: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=cat%3Astat.ML+AND+submittedDate%3A%5B202501010000+TO+202612312359%5D&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100)
