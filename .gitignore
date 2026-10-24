@@ -3,17 +3,27 @@
 .env
 .vscode
 
+*.pyc
+*cpython-*
+__pycache__
+
+
+
+*.pdf
+*.txt
+
+*.tei
+*.xml
 *.jsonl
 *.json
 *.pkl
 
-*.pyc
-*cpython-*
+*.zip
 
 *.sqlite3
-
 backup-*
+*.db
+*.bak
 
-__pycache__
-
-*.pdf
+*.status
+*.log

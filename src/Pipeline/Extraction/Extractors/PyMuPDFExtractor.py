@@ -3,12 +3,12 @@ from pathlib import Path
 
 import pymupdf
 
-from src.Extractors.BaseExtractor import BaseExtractor
+#from src.Pipeline.Extraction.Extractors.BaseExtractor import BaseExtractor
 from src.Models.Document import ExtractedDocument
 from src.Models.Section import DocumentSection
 
 
-class PyMuPDFExtractor(BaseExtractor):
+class PyMuPDFExtractor:
     """Fallback extractor based on PyMuPDF.
 
     Extracts page text and heuristically identifies section headings.

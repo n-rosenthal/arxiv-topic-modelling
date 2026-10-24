@@ -76,14 +76,8 @@ def main() -> None:
         format="%(asctime)s %(levelname)s %(name)s: %(message)s",
     )
 
-    record = read_record(args.metadata, args.index)
-
-    paper = Paper.from_source_record(
-        record,
-        dataset_id="nick007x/arxiv-papers",
-        dataset_split="train",
-        source_record_index=args.index,
-    )
+    record = extractor.record(args.metadata, args.index)
+    paper  = extractor.from_paper(record, args.index)
 
     pipeline = PaperPipeline(
         pdf_dir=args.pdf_dir,

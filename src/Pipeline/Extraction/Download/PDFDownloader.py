@@ -1,4 +1,3 @@
-from __future__ import annotations
 """
 Download individual arXiv papers as PDF files.
 
@@ -7,7 +6,11 @@ downloaded files, and records artifact metadata in the Paper model.
 """
 
 """Download and validate individual papers from arXiv."""
-
+from src.Models import (
+    ProcessingStage,
+    DownloadInfo,
+    Paper,
+)
 
 import hashlib
 import logging
@@ -24,13 +27,30 @@ from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 from urllib.parse import quote
 
-from src.Models.Paper import (
-    DownloadInfo,
-    Paper,
-    ProcessingStage,
-)
-
 logger = logging.getLogger(__name__)
+
+
+def directory_size(dir: Path) -> int:
+    if not dir.exists():
+        return 0
+    return sum(f.stat().st_size for f in dir.iterdir() if f.is_file())
+
+
+def file_size(path: Path) -> int:
+    if not path.exists():
+        return 0
+    return path.stat().st_size
+
+
+def str_download(arxiv_id: str) -> str:
+    pdf_dir = Path("data/pdfs")
+    sample_file = pdf_dir / "2301.00001.pdf"
+    return (
+        f"[{time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())}] "
+        f"[dir=`{directory_size(pdf_dir)}`] "
+        f"[file=`{file_size(sample_file)}`] "
+        f"`{arxiv_id}` . . ."
+    )
 
 
 class PDFDownloadError(RuntimeError):
@@ -86,7 +106,7 @@ class PDFDownloader:
         overwrite: bool = False,
         timeout: float = 60.0,
         max_retries: int = 4,
-        request_interval: float = 3.0,
+        request_interval: float = 5.0,
         chunk_size: int = 1024 * 128,
     ) -> None:
         if timeout <= 0:
@@ -273,7 +293,7 @@ class PDFDownloader:
             raise PDFDownloadError(
                 f"The response from {url} does not appear to be a PDF."
             )
-
+            
         return total_bytes, content_type, digest.hexdigest()
 
     def _download_with_retries(
@@ -340,9 +360,9 @@ class PDFDownloader:
 
                 time.sleep(delay)
 
-            except PDFDownloadError:
+            except PDFDownloadError as e:
                 # A non-PDF response should not be retried blindly.
-                raise
+                raise e
 
         raise PDFDownloadError(
             f"Failed to download {url} after "
@@ -369,9 +389,6 @@ class PDFDownloader:
             verified=True,
         )
 
-        state = paper.processing.state(ProcessingStage.PDF_DOWNLOAD)
-        state.complete()
-
         paper.update_timestamp()
 
     def download(
@@ -391,9 +408,6 @@ class PDFDownloader:
         force_download = (
             self.overwrite if overwrite is None else overwrite
         )
-
-        state = paper.processing.state(ProcessingStage.PDF_DOWNLOAD)
-        state.start()
 
         try:
             if output_path.exists() and not force_download:
@@ -470,6 +484,8 @@ class PDFDownloader:
                     size,
                     output_path,
                 )
+                
+                print(str_download(arxiv_id))
 
                 return output_path
 
@@ -478,8 +494,6 @@ class PDFDownloader:
                     temporary_path.unlink(missing_ok=True)
 
         except Exception as error:
-            state.fail(str(error))
-
             if isinstance(error, (ValueError, PDFDownloadError)):
                 raise
 

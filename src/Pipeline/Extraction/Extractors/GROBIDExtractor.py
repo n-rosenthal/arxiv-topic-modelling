@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import logging
 import re
+import time
 
 from pathlib import Path
 from xml.etree import ElementTree as ET
@@ -42,11 +43,18 @@ class GROBIDExtractor:
         output_dir: str | Path = "data/extracted",
         timeout: tuple[float, float] = (10.0, 300.0),
         verify_tls: bool = True,
+        max_retries: int = 3,
+        retry_wait: float = 5.0,
     ) -> None:
         self.base_url = base_url.rstrip("/")
         self.output_dir = Path(output_dir)
         self.timeout = timeout
         self.verify_tls = verify_tls
+
+        # GROBID answers 503 when all its worker threads are busy. That is
+        # a transient condition, so the request is repeated before giving up.
+        self.max_retries = max(1, max_retries)
+        self.retry_wait = retry_wait
 
         self.output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -106,6 +114,31 @@ class GROBIDExtractor:
             "".join(element.itertext()),
         ).strip()
 
+    @classmethod
+    def _spaced_text(cls, element: ET.Element) -> str:
+        """Text of an element with its parts separated by a space."""
+        return re.sub(
+            r"\s+",
+            " ",
+            " ".join(element.itertext()),
+        ).strip()
+
+    def _retry_delay(
+        self,
+        response: requests.Response,
+        attempt: int,
+    ) -> float:
+        """Seconds to wait after a 503; the server's Retry-After wins."""
+        header = response.headers.get("Retry-After")
+
+        if header:
+            try:
+                return max(0.0, float(header))
+            except ValueError:
+                pass
+
+        return self.retry_wait * attempt
+
     def _request_tei(self, pdf_path: Path) -> str:
         """Submit a PDF to GROBID and return the resulting TEI XML."""
         endpoint = (
@@ -113,23 +146,41 @@ class GROBIDExtractor:
         )
 
         try:
-            with pdf_path.open("rb") as pdf_file:
-                response = self.session.post(
-                    endpoint,
-                    files={
-                        "input": (
-                            pdf_path.name,
-                            pdf_file,
-                            "application/pdf",
-                        )
-                    },
-                    data={
-                        "consolidateHeader": "0",
-                        "consolidateCitations": "0",
-                    },
-                    timeout=self.timeout,
-                    verify=self.verify_tls,
+            for attempt in range(1, self.max_retries + 1):
+                # The file is reopened on every attempt: the previous POST
+                # already consumed its read pointer.
+                with pdf_path.open("rb") as pdf_file:
+                    response = self.session.post(
+                        endpoint,
+                        files={
+                            "input": (
+                                pdf_path.name,
+                                pdf_file,
+                                "application/pdf",
+                            )
+                        },
+                        data={
+                            "consolidateHeader": "0",
+                            "consolidateCitations": "0",
+                        },
+                        timeout=self.timeout,
+                        verify=self.verify_tls,
+                    )
+
+                if response.status_code != 503 or attempt == self.max_retries:
+                    break
+
+                wait = self._retry_delay(response, attempt)
+
+                logger.info(
+                    "GROBID busy (503) for %s; retry %d/%d in %.1fs",
+                    pdf_path.name,
+                    attempt,
+                    self.max_retries,
+                    wait,
                 )
+
+                time.sleep(wait)
 
             response.raise_for_status()
 
@@ -193,10 +244,12 @@ class GROBIDExtractor:
             for author in self._descendants(element, "author"):
                 person = self._first_child(author, "persName")
 
-                if person is None:
-                    name = self._text(author)
-                else:
-                    name = self._text(person)
+                # GROBID writes <forename>..</forename><surname>..</surname>
+                # with no whitespace between them, so the parts must be
+                # joined explicitly or the name comes out as "TKipf".
+                name = self._spaced_text(
+                    author if person is None else person
+                )
 
                 if name and name not in authors:
                     authors.append(name)
@@ -533,12 +586,40 @@ class GROBIDExtractor:
 
         return sections
 
+    @staticmethod
+    def _safe_identifier(paper_id: str) -> str:
+        return re.sub(r"[^A-Za-z0-9_.-]", "_", paper_id)
+
+    def tei_path(self, paper_id: str) -> Path:
+        """Where the TEI XML of a paper is (or will be) stored."""
+        return (
+            self.output_dir
+            / f"{self._safe_identifier(paper_id)}.tei.xml"
+        )
+
+    def _save_tei(self, xml_text: str, paper_id: str) -> Path:
+        tei_path = self.tei_path(paper_id)
+        temporary_path = tei_path.with_suffix(".tei.xml.tmp")
+
+        temporary_path.write_text(
+            xml_text,
+            encoding="utf-8",
+        )
+        temporary_path.replace(tei_path)
+
+        return tei_path
+
     def extract(
         self,
         pdf_path: str | Path,
         paper_id: str,
     ) -> ExtractedDocument:
-        """Parse a PDF and return its sections, citations, and references."""
+        """Parse a PDF and return its sections, citations, and references.
+
+        The TEI returned by GROBID is stored in ``output_dir`` before it is
+        parsed, so it survives a parsing failure and can be parsed again
+        later with :meth:`extract_from_tei`, without the PDF or GROBID.
+        """
         pdf_path = Path(pdf_path)
 
         if not pdf_path.is_file():
@@ -547,23 +628,44 @@ class GROBIDExtractor:
             )
 
         xml_text = self._request_tei(pdf_path)
+        tei_path = self._save_tei(xml_text, paper_id)
 
+        return self.parse_tei(xml_text, paper_id, tei_path)
+
+    def extract_from_tei(
+        self,
+        paper_id: str,
+        tei_path: str | Path | None = None,
+    ) -> ExtractedDocument:
+        """Rebuild a document from a TEI file stored by :meth:`extract`.
+
+        Needs neither the PDF nor a running GROBID server. ``tei_path``
+        defaults to the location :meth:`tei_path` gives for ``paper_id``.
+        """
+        path = Path(tei_path) if tei_path else self.tei_path(paper_id)
+
+        if not path.is_file():
+            raise FileNotFoundError(f"TEI does not exist: {path}")
+
+        return self.parse_tei(
+            path.read_text(encoding="utf-8"),
+            paper_id,
+            path,
+        )
+
+    def parse_tei(
+        self,
+        xml_text: str,
+        paper_id: str,
+        tei_path: str | Path | None = None,
+    ) -> ExtractedDocument:
+        """Turn GROBID TEI XML into sections, citations, and references."""
         try:
             root = ET.fromstring(xml_text)
         except ET.ParseError as exc:
             raise GROBIDExtractionError(
-                f"Could not parse TEI returned for {pdf_path}."
+                f"Could not parse TEI for {paper_id}."
             ) from exc
-
-        safe_paper_id = re.sub(r"[^A-Za-z0-9_.-]", "_", paper_id)
-        tei_path = self.output_dir / f"{safe_paper_id}.tei.xml"
-        temporary_path = tei_path.with_suffix(".tei.xml.tmp")
-
-        temporary_path.write_text(
-            xml_text,
-            encoding="utf-8",
-        )
-        temporary_path.replace(tei_path)
 
         references = self._extract_references(root)
         sections = self._extract_sections(root, paper_id)
@@ -594,7 +696,7 @@ class GROBIDExtractor:
             sections=sections,
             references=references,
             extraction_method="grobid",
-            tei_path=str(tei_path),
+            tei_path=str(tei_path) if tei_path else None,
             warnings=warnings,
         )
 

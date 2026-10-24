@@ -1,0 +1,5 @@
+| category | time-interval | stop-words | +introduction |
+|----------|---------------|------------|---------------|
+|    8     |       8       |      2     |       2       |
+
+256

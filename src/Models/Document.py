@@ -1,4 +1,13 @@
-"""Parsed scientific document model."""
+"""
+src/Models/Document.py 
+
+Extracted text from a Paper's PDF.
+"""
+from __future__ import annotations
+
+__author__  = "n-rosenthal"
+__version__ = "1.0.1"
+__date__    = "2026-10-18"
 
 from dataclasses import asdict, dataclass, field
 
@@ -20,3 +29,7 @@ class ExtractedDocument:
 
     def to_dict(self) -> dict:
         return asdict(self)
+
+    @property
+    def text(self) -> str:
+        pass

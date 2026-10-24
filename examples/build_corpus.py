@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+ #!/usr/bin/env python3
 """Constrói um corpus de artigos do arXiv para modelagem de tópicos."""
 
 from __future__ import annotations
@@ -119,7 +119,7 @@ def write_json_atomic(path: Path, data: dict) -> None:
     with temporary_path.open("w", encoding="utf-8") as file:
         json.dump(data, file, ensure_ascii=False, indent=2)
         file.write("\n")
-
+ 
     temporary_path.replace(path)
 
 
@@ -253,4 +253,4 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    main(lko)

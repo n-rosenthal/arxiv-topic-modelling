@@ -1,9 +1,9 @@
 import logging
 from pathlib import Path
 
-from src.Extractors.GROBIDExtractor import GROBIDExtractor
-from src.Extractors.PyMuPDFExtractor import PyMuPDFExtractor
-from src.Models.Document import ExtractedDocument
+from src.Pipeline.Extraction.Extractors.GROBIDExtractor import GROBIDExtractor
+from src.Pipeline.Extraction.Extractors.PyMuPDFExtractor import PyMuPDFExtractor
+from src.Models import ExtractedDocument
 
 
 logger = logging.getLogger(__name__)

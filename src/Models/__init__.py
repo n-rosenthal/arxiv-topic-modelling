@@ -1,10 +1,9 @@
 """Data models for arxiv-topic-modelling."""
 
-from src.Models.Paper import (
+from src.Models.Processing import (
     DownloadInfo,
     EmbeddingInfo,
     GraphInfo,
-    Paper,
     ProcessingInfo,
     ProcessingStage,
     ProcessingStatus,
@@ -14,11 +13,14 @@ from src.Models.Paper import (
     TopicAssignment,
 )
 
+from src.Models.Paper    import Paper
+from src.Models.Document import ExtractedDocument
+
+
 __all__ = [
     "DownloadInfo",
     "EmbeddingInfo",
     "GraphInfo",
-    "Paper",
     "ProcessingInfo",
     "ProcessingStage",
     "ProcessingStatus",
@@ -26,4 +28,7 @@ __all__ = [
     "StageState",
     "TextArtifact",
     "TopicAssignment",
+
+    "Paper",
+    "ExtractedDocument",
 ]

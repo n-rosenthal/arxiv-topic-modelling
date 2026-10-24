@@ -21,8 +21,9 @@ import pymupdf
 from src.Models import Paper, ProcessingStage
 
 
-__author__ = "n-rosenthal"
-__version__ = "1.0.0"
+__author__  = "n-rosenthal"
+__version__ = "1.0.1"
+__date__    = "2026-10-18"
 
 
 logger = logging.getLogger(__name__)
@@ -187,19 +188,15 @@ class PDFTextExtractor:
                 f"Extraction already exists: {output_path}"
             )
 
-        validation_state = paper.processing.state(
-            ProcessingStage.PDF_VALIDATION
-        )
-        extraction_state = paper.processing.state(
-            ProcessingStage.TEXT_EXTRACTION
-        )
-
+        #  begins extraction process
+        paper.stage = ProcessingStage.PDF_TO_TEXT
+        
         try:
-            validation_state.start()
             self._validate_pdf(source_path)
-            validation_state.complete()
 
-            extraction_state.start()
+            # finishes extraction process
+            paper.stage = ProcessingStage.TEXT_AVAILABLE
+            
             pages = self._extract_pages(source_path)
 
             # Form-feed separators preserve the boundaries between pages.
@@ -224,8 +221,6 @@ class PDFTextExtractor:
                 "page.get_text('text', sort=True)"
             )
             artifact.created_at = self._utc_now()
-
-            extraction_state.complete()
 
             # Record the input PDF's checksum if it has not already
             # been recorded by the downloader.
@@ -254,7 +249,8 @@ class PDFTextExtractor:
                 # failure; it may simply be a request to avoid overwriting.
                 raise
 
-            extraction_state.fail(str(exc))
+            # the extraction process failed
+            paper.stage = ProcessingStage.INVALID_TEXT
 
             try:
                 paper.update_timestamp()

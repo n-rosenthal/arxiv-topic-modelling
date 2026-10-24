@@ -1,16 +1,12 @@
 """
-src/Extractors/Downloader.py
+src/Pipeline/Extraction/Download/Downloader.py
 
-Provides the ArxivDownloader class for retrieving selected records
-from a Hugging Face dataset of arXiv papers.
-
-Records are streamed and written to JSON Lines (JSONL), avoiding the
-need to load the entire dataset into memory.
+Downloades scientific papers from arXiv
 """
 
-__author__ = "n-rosenthal"
-__version__ = "1.0.0"
-__date__ = "2026-10-15"
+__author__  = "n-rosenthal"
+__version__ = "1.0.1"
+__date__    = "2026-10-18"
 
 import json
 import logging
@@ -20,9 +16,9 @@ from typing import Any, Iterator, Optional
 from datasets import IterableDataset, load_dataset
 from tqdm import tqdm
 
+from src.Config import config
 
 logger = logging.getLogger(__name__)
-
 
 class ArxivDownloader:
     """
@@ -38,13 +34,10 @@ class ArxivDownloader:
         Directory used for Hugging Face's local cache.
     """
 
-    DEFAULT_DATASET_ID = "CShorten/ML-ArXiv-Papers"
-    DEFAULT_SPLIT = "train"
-
     def __init__(
         self,
-        dataset_id: str = DEFAULT_DATASET_ID,
-        split: str = DEFAULT_SPLIT,
+        dataset_id: str = config["DEFAULT_DATASET_ID"],
+        split: str      = config["DEFAULT_SPLIT"],
         cache_dir: Optional[str | Path] = None,
     ) -> None:
         if not dataset_id.strip():
@@ -53,11 +46,13 @@ class ArxivDownloader:
         if not split.strip():
             raise ValueError("split cannot be empty.")
 
-        self.dataset_id = dataset_id
-        self.split = split
-        self.cache_dir = (
+        self.dataset_id: str = dataset_id
+        self.split: str      = split
+        self.cache_dir: Path = (
             Path(cache_dir) if cache_dir is not None else None
         )
+
+
 
     def load(self) -> IterableDataset:
         """Load metadata from the configured Hugging Face dataset."""
@@ -230,3 +225,4 @@ class ArxivDownloader:
         )
 
         return count
+
