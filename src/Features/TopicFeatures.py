@@ -37,7 +37,26 @@ def paper_tokens(sections_json: Path, skip_titles: tuple[str, ...] = ()) -> list
     return tokens
 
 
-def load_corpus(db, skip_titles: tuple[str, ...] = ()) -> tuple[list[str], list[list[str]]]:
+# Palavras funcionais que sobrevivem à remoção de stopwords em inglês (o
+# limpador só conhece inglês) e denunciam texto em francês/espanhol/alemão/etc.
+_FOREIGN_MARKERS = frozenset(
+    "de la les le des et en est un une dans que qui pour pas sur au du el los las del "
+    "por con una es der die das und ist nicht mit von ein eine zu im den dem da di che "
+    "il lo gli per sono non os uma para com em se".split()
+)
+
+
+def looks_non_english(tokens: list[str], marker_share: float = 0.01, cyrillic_share: float = 0.02) -> bool:
+    """Heurística barata: muitas palavras funcionais estrangeiras ou muito cirílico/CJK."""
+    n = len(tokens)
+    if not n:
+        return False
+    markers = sum(t in _FOREIGN_MARKERS for t in tokens)
+    non_latin = sum(any(ord(c) > 0x2FF for c in t) for t in tokens)
+    return markers / n > marker_share or non_latin / n > cyrillic_share
+
+
+def load_corpus(db, skip_titles: tuple[str, ...] = (), drop_non_english: bool = True) -> tuple[list[str], list[list[str]]]:
     rows = db.execute(
         "SELECT arxiv_id, text_path FROM processing "
         "WHERE text_path LIKE '%.json' ORDER BY arxiv_id"
@@ -46,6 +65,9 @@ def load_corpus(db, skip_titles: tuple[str, ...] = ()) -> tuple[list[str], list[
     for arxiv_id, path in rows:
         if Path(path).is_file():
             tokens = paper_tokens(path, skip_titles)
+            if drop_non_english and looks_non_english(tokens):
+                print(f"descartado (não parece inglês): {arxiv_id}")
+                continue
             if tokens:
                 ids.append(arxiv_id)
                 docs.append(tokens)
@@ -79,9 +101,13 @@ def build_features(
     return bow, tfidf.astype(np.float32).tocsr(), vectorizer.get_feature_names_out().tolist()
 
 
-def run(db_path=Database.DEFAULT_DB_PATH, out_dir="data/features", version="v1", **kwargs) -> dict:
+def run(db_path=Database.DEFAULT_DB_PATH, out_dir="data/features", version="v1",
+        drop_non_english=True, extra_stopwords=(), **kwargs) -> dict:
     db = Database.get_connection(db_path)
-    ids, docs = load_corpus(db)
+    ids, docs = load_corpus(db, drop_non_english=drop_non_english)
+    if extra_stopwords:
+        stop = set(extra_stopwords)
+        docs = [[t for t in d if t not in stop] for d in docs]
     if not docs:
         raise SystemExit("nenhum paper com JSON de seções encontrado")
 
@@ -110,11 +136,14 @@ def main() -> None:
     p.add_argument("--min-df", type=float, default=5, help=">=1: nº de papers; <1: fração")
     p.add_argument("--max-df", type=float, default=0.5)
     p.add_argument("--max-features", type=int, default=None)
+    p.add_argument("--keep-non-english", action="store_true", help="não descarta papers que não parecem inglês")
+    p.add_argument("--stopwords", nargs="*", default=[], help="stopwords extras do domínio (ex.: fig across enabling)")
     p.add_argument("--ngrams", type=int, default=1, help="1 = só unigramas; 2 = + bigramas")
     a = p.parse_args()
     as_num = lambda v: int(v) if v >= 1 else v
     print(run(a.db, a.out, a.version, min_df=as_num(a.min_df), max_df=as_num(a.max_df),
-              max_features=a.max_features, ngram_range=(1, a.ngrams)))
+              max_features=a.max_features, drop_non_english=not a.keep_non_english,
+              extra_stopwords=a.stopwords, ngram_range=(1, a.ngrams)))
 
 
 if __name__ == "__main__":
