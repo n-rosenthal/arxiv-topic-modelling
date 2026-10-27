@@ -96,6 +96,7 @@ def graph_summary(edges, all_ids) -> dict:
         in_deg[t] += 1
         adj[s].add(t)
         adj[t].add(s)
+    isolated = sum(1 for n in all_ids if n not in adj)   # antes da busca: adj[n] cria chaves
     seen, components = set(), []
     for node in all_ids:
         if node in seen:
@@ -105,14 +106,14 @@ def graph_summary(edges, all_ids) -> dict:
         while stack:
             n = stack.pop()
             comp += 1
-            for m in adj[n] - seen:
+            for m in adj.get(n, set()) - seen:
                 seen.add(m)
                 stack.append(m)
         components.append(comp)
     components.sort(reverse=True)
     return {
         "nodes": len(all_ids), "edges": len(edges),
-        "isolated_nodes": sum(1 for n in all_ids if n not in adj),
+        "isolated_nodes": isolated,
         "largest_component": components[0] if components else 0,
         "components": len(components),
         "mean_out_degree": round(len(edges) / max(len(all_ids), 1), 3),

@@ -16,7 +16,9 @@ Uso:
 from __future__ import annotations
 
 import argparse
+import csv
 import json
+import re
 from pathlib import Path
 
 import numpy as np
@@ -37,40 +39,76 @@ def paper_tokens(sections_json: Path, skip_titles: tuple[str, ...] = ()) -> list
     return tokens
 
 
-# Palavras funcionais que sobrevivem à remoção de stopwords em inglês (o
-# limpador só conhece inglês) e denunciam texto em francês/espanhol/alemão/etc.
-_FOREIGN_MARKERS = frozenset(
-    "de la les le des et en est un une dans que qui pour pas sur au du el los las del "
-    "por con una es der die das und ist nicht mit von ein eine zu im den dem da di che "
-    "il lo gli per sono non os uma para com em se".split()
+# Detecção de idioma pelo TEXTO BRUTO (os tokens já perderam as stopwords, e
+# palavras como "per", "non" ou "de" aparecem em inglês técnico). Textos em
+# inglês têm cerca de 20-30% das palavras nesta lista; francês, alemão,
+# espanhol, português e russo ficam perto de zero.
+_ENGLISH_FUNCTION_WORDS = frozenset(
+    "the of and to in is that for with as we are this by on be an it from at which can "
+    "or our not these have has was were been their also each such more than when where "
+    "then thus how its into both using used".split()
 )
+_SAMPLE_CHARS = 30000
+_MIN_ENGLISH_RATIO = 0.08
 
 
-def looks_non_english(tokens: list[str], marker_share: float = 0.01, cyrillic_share: float = 0.02) -> bool:
-    """Heurística barata: muitas palavras funcionais estrangeiras ou muito cirílico/CJK."""
-    n = len(tokens)
-    if not n:
-        return False
-    markers = sum(t in _FOREIGN_MARKERS for t in tokens)
-    non_latin = sum(any(ord(c) > 0x2FF for c in t) for t in tokens)
-    return markers / n > marker_share or non_latin / n > cyrillic_share
+def english_ratio(text: str) -> float | None:
+    """Fração de palavras funcionais do inglês; None se o texto é curto demais para julgar."""
+    sample = text[:_SAMPLE_CHARS]
+    words = re.findall(r"[^\W\d_]+", sample.lower())
+    if len(words) < 150:
+        return None
+    return sum(w in _ENGLISH_FUNCTION_WORDS for w in words) / len(words)
 
 
-def load_corpus(db, skip_titles: tuple[str, ...] = (), drop_non_english: bool = True) -> tuple[list[str], list[list[str]]]:
+def non_latin_share(text: str) -> float:
+    letters = [c for c in text[:_SAMPLE_CHARS] if c.isalpha()]
+    return sum(ord(c) > 0x2FF for c in letters) / len(letters) if letters else 0.0
+
+
+def language_check(raw_text: str) -> tuple[bool, float | None]:
+    """(parece_inglês, razão). Na dúvida (texto curto), mantém o paper."""
+    if non_latin_share(raw_text) > 0.05:
+        return False, 0.0
+    ratio = english_ratio(raw_text)
+    return (True if ratio is None else ratio >= _MIN_ENGLISH_RATIO), ratio
+
+
+def read_paper(sections_json: Path, skip_titles: tuple[str, ...] = ()) -> tuple[list[str], str]:
+    """(tokens, texto bruto) de um paper, a partir do JSON de seções."""
+    data = json.loads(Path(sections_json).read_text(encoding="utf-8"))
+    tokens: list[str] = []
+    raw: list[str] = []
+    for section in data["sections"]:
+        if section.get("title", "").strip().lower() in skip_titles:
+            continue
+        tokens.extend(section.get("tokens", []))
+        raw.append(section.get("raw_text", ""))
+    return tokens, "\n".join(raw)
+
+
+def load_corpus(
+    db, skip_titles: tuple[str, ...] = (), drop_non_english: bool = True, dropped: list | None = None,
+) -> tuple[list[str], list[list[str]]]:
     rows = db.execute(
         "SELECT arxiv_id, text_path FROM processing "
         "WHERE text_path LIKE '%.json' ORDER BY arxiv_id"
     ).fetchall()
     ids, docs = [], []
     for arxiv_id, path in rows:
-        if Path(path).is_file():
-            tokens = paper_tokens(path, skip_titles)
-            if drop_non_english and looks_non_english(tokens):
-                print(f"descartado (não parece inglês): {arxiv_id}")
+        if not Path(path).is_file():
+            continue
+        tokens, raw = read_paper(path, skip_titles)
+        if not tokens:
+            continue
+        if drop_non_english:
+            is_english, ratio = language_check(raw)
+            if not is_english:
+                if dropped is not None:
+                    dropped.append((arxiv_id, ratio))
                 continue
-            if tokens:
-                ids.append(arxiv_id)
-                docs.append(tokens)
+        ids.append(arxiv_id)
+        docs.append(tokens)
     return ids, docs
 
 
@@ -104,17 +142,26 @@ def build_features(
 def run(db_path=Database.DEFAULT_DB_PATH, out_dir="data/features", version="v1",
         drop_non_english=True, extra_stopwords=(), **kwargs) -> dict:
     db = Database.get_connection(db_path)
-    ids, docs = load_corpus(db, drop_non_english=drop_non_english)
+    dropped: list = []
+    ids, docs = load_corpus(db, drop_non_english=drop_non_english, dropped=dropped)
     if extra_stopwords:
         stop = set(extra_stopwords)
         docs = [[t for t in d if t not in stop] for d in docs]
     if not docs:
         raise SystemExit("nenhum paper com JSON de seções encontrado")
 
-    bow, tfidf, vocabulary = build_features(docs, **kwargs)
-
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
+    if dropped:
+        with open(out / "dropped_non_english.csv", "w", newline="", encoding="utf-8") as f:
+            writer = csv.writer(f)
+            writer.writerow(["arxiv_id", "english_function_word_ratio"])
+            writer.writerows(sorted(dropped, key=lambda row: (row[1] is None, row[1])))
+        print(f"descartados por idioma: {len(dropped)} (lista em {out / 'dropped_non_english.csv'}; "
+              f"limiar {_MIN_ENGLISH_RATIO})")
+
+    bow, tfidf, vocabulary = build_features(docs, **kwargs)
+
     sp.save_npz(out / f"bow_{version}.npz", bow)
     sp.save_npz(out / f"tfidf_{version}.npz", tfidf)
     (out / f"vocabulary_{version}.json").write_text(json.dumps(vocabulary, ensure_ascii=False), encoding="utf-8")

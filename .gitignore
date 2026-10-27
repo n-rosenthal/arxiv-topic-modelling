@@ -19,6 +19,7 @@ __pycache__
 *.pkl
 
 *.npz
+*.npy
 
 *.zip
 
